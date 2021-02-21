@@ -4215,7 +4215,7 @@ Ambient_t Light_wmotr_1_0xe000008 = {
 
 Gfx DL_wmotr_1_0xe0281a0[] = {
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsDPSetTile(0, 2, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0),
 gsSPTexture(65535, 65535, 0, 0, 1),
 gsDPTileSync(),
@@ -5526,13 +5526,13 @@ gsSPEndDisplayList(),
 
 Gfx DL_wmotr_1_0xe0358a0[] = {
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsDPSetTile(0, 2, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0),
 gsSPTexture(65535, 65535, 0, 0, 1),
 gsDPTileSync(),
 gsDPSetTile(0, 2, 8, 0, 0, 0, 0, 5, 0, 0, 5, 0),
 gsDPSetTileSize(0, 0, 0, 12, 124),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0),
 gsDPTileSync(),
 gsDPLoadSync(),
 gsDPLoadBlock(7, 0, 0, 1023, 256),
@@ -5709,7 +5709,7 @@ gsSPVertex(VB_wmotr_1_0xe0257d0, 3, 0),
 gsSP1Triangle(1, 2, 0, 0),
 gsSPTexture(65535, 65535, 0, 0, 0),
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsSPEndDisplayList(),
 };
 

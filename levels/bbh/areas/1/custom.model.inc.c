@@ -6045,7 +6045,7 @@ Ambient_t Light_bbh_1_0xe000008 = {
 
 Gfx DL_bbh_1_0xe02c140[] = {
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsDPSetTile(0, 2, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0),
 gsSPTexture(65535, 65535, 0, 0, 1),
 gsDPTileSync(),
@@ -7988,20 +7988,20 @@ gsDPPipeSync(),
 gsDPSetCycleType(G_CYC_1CYCLE),
 gsDPSetRenderMode(G_RM_AA_ZB_OPA_SURF, G_RM_NOOP2),
 gsSPGeometryMode(G_FOG, 0),
-gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, SHADE, 0, 0, 0, SHADE, 0, 0, 0, SHADE),
 gsSPGeometryMode(0, G_CULL_BACK|G_LIGHTING),
 gsSPEndDisplayList(),
 };
 
 Gfx DL_bbh_1_0xe043110[] = {
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsDPSetTile(0, 2, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0),
 gsSPTexture(65535, 65535, 0, 0, 1),
 gsDPTileSync(),
 gsDPSetTile(0, 2, 8, 0, 0, 0, 0, 5, 0, 0, 5, 0),
 gsDPSetTileSize(0, 0, 0, 12, 124),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0),
 gsDPTileSync(),
 gsDPLoadSync(),
 gsDPLoadBlock(7, 0, 0, 1023, 256),
@@ -8054,7 +8054,7 @@ gsSP2Triangles(0, 1, 2, 0,1, 0, 3, 0),
 gsSP2Triangles(4, 5, 6, 0,5, 4, 7, 0),
 gsSPTexture(65535, 65535, 0, 0, 0),
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsSPEndDisplayList(),
 };
 

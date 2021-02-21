@@ -5985,7 +5985,7 @@ Ambient_t Light_thi_1_0xe000008 = {
 
 Gfx DL_thi_1_0xe034780[] = {
 gsDPPipeSync(),
-gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE, TEXEL0, 0, SHADE, 0, 0, 0, 0, SHADE),
 gsDPSetTile(0, 2, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0),
 gsSPTexture(65535, 65535, 0, 0, 1),
 gsDPTileSync(),
@@ -8026,7 +8026,7 @@ gsDPPipeSync(),
 gsDPSetCycleType(G_CYC_1CYCLE),
 gsDPSetRenderMode(G_RM_AA_ZB_OPA_SURF, G_RM_NOOP2),
 gsSPGeometryMode(G_FOG, 0),
-gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, SHADE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0),
 gsSPGeometryMode(0, G_CULL_BACK|G_LIGHTING),
 gsSPEndDisplayList(),
 };
