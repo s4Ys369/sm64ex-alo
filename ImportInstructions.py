@@ -57,21 +57,22 @@ If a model is in this list, it has either an unrecognized ID or a new texture.
 If a model is not in this list, it does not guarantee that it is unedited.
 
  model bubble_geo_ in folder bubble has a new model or new textures.
- model geo_bitdw_0003C0_ in folder bitdw/areas/1/starting_platform has a new model or new textures.
- model geo_bitdw_0003D8_ in folder bitdw/areas/1/large_platform has a new model or new textures.
- model geo_bitdw_000408_ in folder bitdw/areas/1/quartzy_path_1 has a new model or new textures.
- model geo_bitdw_000420_ in folder bitdw/areas/1/quartzy_path_2 has a new model or new textures.
- model geo_bitdw_000438_ in folder bitdw/areas/1/quartzy_path_fences has a new model or new textures.
- model geo_bitdw_000468_ in folder bitdw/areas/1/platform_with_hill has a new model or new textures.
- model geo_bitdw_000480_ in folder bitdw/areas/1/wooden_platform has a new model or new textures.
- model geo_bitdw_000498_ in folder bitdw/areas/1/platforms_and_tilting has a new model or new textures.
- model geo_bitdw_0004B0_ in folder bitdw/areas/1/platforms_and_tilting2 has a new model or new textures.
- model geo_bitdw_0004E0_ in folder bitdw/areas/1/staircase_slope_and_platform has a new model or new textures.
- model geo_bitdw_000510_ in folder bitdw/areas/1/narrow_path_platform has a new model or new textures.
- model geo_bitdw_000558_ in folder bitdw/square_platform has a new model or new textures.
- model geo_bitdw_000540_ in folder bitdw/seesaw_platform has a new model or new textures.
- model geo_bitdw_000528_ in folder bitdw/sliding_platform has a new model or new textures.
- model geo_bitdw_000600_ in folder bitdw/collapsing_stairs_5 has a new model or new textures.
+ bitdw
+	 model geo_bitdw_0003C0_ in folder bitdw/areas/1/starting_platform has a new model or new textures.
+	 model geo_bitdw_0003D8_ in folder bitdw/areas/1/large_platform has a new model or new textures.
+	 model geo_bitdw_000408_ in folder bitdw/areas/1/quartzy_path_1 has a new model or new textures.
+	 model geo_bitdw_000420_ in folder bitdw/areas/1/quartzy_path_2 has a new model or new textures.
+	 model geo_bitdw_000438_ in folder bitdw/areas/1/quartzy_path_fences has a new model or new textures.
+	 model geo_bitdw_000468_ in folder bitdw/areas/1/platform_with_hill has a new model or new textures.
+	 model geo_bitdw_000480_ in folder bitdw/areas/1/wooden_platform has a new model or new textures.
+	 model geo_bitdw_000498_ in folder bitdw/areas/1/platforms_and_tilting has a new model or new textures.
+	 model geo_bitdw_0004B0_ in folder bitdw/areas/1/platforms_and_tilting2 has a new model or new textures.
+	 model geo_bitdw_0004E0_ in folder bitdw/areas/1/staircase_slope_and_platform has a new model or new textures.
+	 model geo_bitdw_000510_ in folder bitdw/areas/1/narrow_path_platform has a new model or new textures.
+	 model geo_bitdw_000558_ in folder bitdw/square_platform has a new model or new textures.
+	 model geo_bitdw_000540_ in folder bitdw/seesaw_platform has a new model or new textures.
+	 model geo_bitdw_000528_ in folder bitdw/sliding_platform has a new model or new textures.
+	 model geo_bitdw_000600_ in folder bitdw/collapsing_stairs_5 has a new model or new textures.
  model bubbly_tree_geo_ in folder tree has a new model or new textures.
  model metal_door_geo_ in folder door has a new model or new textures.
  model marios_winged_metal_cap_geo_ in folder mario_cap has a new model or new textures.
@@ -92,96 +93,106 @@ If a model is not in this list, it does not guarantee that it is unedited.
  model black_bobomb_geo_ in folder bobomb has a new model or new textures.
  model cannon_lid_seg8_dl_080048E0_ in folder cannon_lid has a new model or new textures.
  model metal_box_geo_ in folder metal_box has a new model or new textures.
- model rr_geo_000678_ in folder rr/areas/1/3 has a new model or new textures.
- model rr_geo_000690_ in folder rr/areas/1/4 has a new model or new textures.
- model rr_geo_0006A8_ in folder rr/areas/1/5 has a new model or new textures.
- model rr_geo_0006C0_ in folder rr/areas/1/6 has a new model or new textures.
- model rr_geo_0006D8_ in folder rr/areas/1/7 has a new model or new textures.
- model rr_geo_0006F0_ in folder rr/areas/1/8 has a new model or new textures.
- model rr_geo_000708_ in folder rr/areas/1/9 has a new model or new textures.
- model rr_geo_000720_ in folder rr/areas/1/10 has a new model or new textures.
- model rr_geo_000738_ in folder rr/areas/1/11 has a new model or new textures.
- model rr_geo_000788_ in folder rr/areas/1/14 has a new model or new textures.
- model rr_geo_0007A0_ in folder rr/areas/1/15 has a new model or new textures.
- model rr_geo_0007B8_ in folder rr/areas/1/16 has a new model or new textures.
- model rr_geo_0007E8_ in folder rr/areas/1/18 has a new model or new textures.
- model rr_geo_0008C0_ in folder rr/sliding_platform has a new model or new textures.
- model rr_geo_0008A8_ in folder rr/octagonal_platform has a new model or new textures.
- model rr_geo_000878_ in folder rr/rotating_bridge_platform has a new model or new textures.
- model rr_geo_000908_ in folder rr/seesaw_platform has a new model or new textures.
- model rr_geo_000940_ in folder rr/l_platform has a new model or new textures.
- model rr_geo_000860_ in folder rr/swinging_platform has a new model or new textures.
- model rr_geo_000920_ in folder rr/donut_block has a new model or new textures.
- model rr_geo_0008F0_ in folder rr/elevator_platform has a new model or new textures.
- model rr_geo_000958_ in folder rr/tricky_triangles1 has a new model or new textures.
- model rr_geo_000970_ in folder rr/tricky_triangles_2 has a new model or new textures.
- model rr_geo_0009A0_ in folder rr/tricky_triangles_4 has a new model or new textures.
- model rr_geo_000660_ in folder rr/areas/1/2 has a new model or new textures.
+ rr
+	 model rr_geo_000678_ in folder rr/areas/1/3 has a new model or new textures.
+	 model rr_geo_000690_ in folder rr/areas/1/4 has a new model or new textures.
+	 model rr_geo_0006A8_ in folder rr/areas/1/5 has a new model or new textures.
+	 model rr_geo_0006C0_ in folder rr/areas/1/6 has a new model or new textures.
+	 model rr_geo_0006D8_ in folder rr/areas/1/7 has a new model or new textures.
+	 model rr_geo_0006F0_ in folder rr/areas/1/8 has a new model or new textures.
+	 model rr_geo_000708_ in folder rr/areas/1/9 has a new model or new textures.
+	 model rr_geo_000720_ in folder rr/areas/1/10 has a new model or new textures.
+	 model rr_geo_000738_ in folder rr/areas/1/11 has a new model or new textures.
+	 model rr_geo_000788_ in folder rr/areas/1/14 has a new model or new textures.
+	 model rr_geo_0007A0_ in folder rr/areas/1/15 has a new model or new textures.
+	 model rr_geo_0007B8_ in folder rr/areas/1/16 has a new model or new textures.
+	 model rr_geo_0007E8_ in folder rr/areas/1/18 has a new model or new textures.
+	 model rr_geo_0008C0_ in folder rr/sliding_platform has a new model or new textures.
+	 model rr_geo_0008A8_ in folder rr/octagonal_platform has a new model or new textures.
+	 model rr_geo_000878_ in folder rr/rotating_bridge_platform has a new model or new textures.
+	 model rr_geo_000908_ in folder rr/seesaw_platform has a new model or new textures.
+	 model rr_geo_000940_ in folder rr/l_platform has a new model or new textures.
+	 model rr_geo_000860_ in folder rr/swinging_platform has a new model or new textures.
+	 model rr_geo_000920_ in folder rr/donut_block has a new model or new textures.
+	 model rr_geo_0008F0_ in folder rr/elevator_platform has a new model or new textures.
+	 model rr_geo_000958_ in folder rr/tricky_triangles1 has a new model or new textures.
+	 model rr_geo_000970_ in folder rr/tricky_triangles_2 has a new model or new textures.
+	 model rr_geo_0009A0_ in folder rr/tricky_triangles_4 has a new model or new textures.
+	 model rr_geo_000660_ in folder rr/areas/1/2 has a new model or new textures.
  model mr_i_iris_geo_ in folder mr_i_iris has a new model or new textures.
  model dorrie_geo_ in folder dorrie has a new model or new textures.
- model wf_geo_0007E0_ in folder wf/areas/1/5 has a new model or new textures.
- model wf_geo_000878_ in folder wf/areas/1/8 has a new model or new textures.
- model wf_geo_0008A8_ in folder wf/areas/1/10 has a new model or new textures.
- model wf_geo_000940_ in folder wf/areas/1/13 has a new model or new textures.
- model wf_geo_000AE0_ in folder wf/areas/1/14 has a new model or new textures.
- model wf_geo_0009D0_ in folder wf/areas/1/18 has a new model or new textures.
- model wf_geo_000AF8_ in folder wf/beta_extending_platform has a new model or new textures.
- model wf_geo_000B10_ in folder wf/extending_platform has a new model or new textures.
- model wf_geo_000BA8_ in folder wf/kickable_board has a new model or new textures.
- model wf_geo_000BE0_ in folder wf/tower_door has a new model or new textures.
- model wf_geo_000A58_ in folder wf/rotating_wooden_platform has a new model or new textures.
- model jrb_geo_000930_ in folder jrb/rock has a new model or new textures.
- model jrb_geo_000900_ in folder jrb/falling_pillar has a new model or new textures.
- model jrb_geo_000918_ in folder jrb/falling_pillar_base has a new model or new textures.
- model ttm_geo_000778_ in folder ttm/areas/1/4 has a new model or new textures.
- model ttm_geo_0007A8_ in folder ttm/areas/1/5 has a new model or new textures.
- model ttm_geo_0007D8_ in folder ttm/areas/1/6 has a new model or new textures.
- model ttm_geo_0008D0_ in folder ttm/areas/1/12 has a new model or new textures.
- model ttm_geo_0008F8_ in folder ttm/areas/1/13 has a new model or new textures.
- model ttm_geo_000920_ in folder ttm/areas/1/14 has a new model or new textures.
- model ttm_geo_000948_ in folder ttm/areas/1/15 has a new model or new textures.
- model ttm_geo_000970_ in folder ttm/areas/1/16 has a new model or new textures.
- model ttm_geo_000990_ in folder ttm/areas/1/17 has a new model or new textures.
- model ttm_geo_0009C0_ in folder ttm/areas/1/18 has a new model or new textures.
- model ttm_geo_0009F0_ in folder ttm/areas/1/19 has a new model or new textures.
- model ttm_geo_000A18_ in folder ttm/areas/1/20 has a new model or new textures.
- model ttm_geo_000730_ in folder ttm/rolling_log has a new model or new textures.
- model ttm_geo_000DBC_ in folder ttm/moon_smiley has a new model or new textures.
- model ttm_geo_000DF4_ in folder ttm/slide_exit_podium has a new model or new textures.
+ wf
+	 model wf_geo_0007E0_ in folder wf/areas/1/5 has a new model or new textures.
+	 model wf_geo_000878_ in folder wf/areas/1/8 has a new model or new textures.
+	 model wf_geo_0008A8_ in folder wf/areas/1/10 has a new model or new textures.
+	 model wf_geo_000940_ in folder wf/areas/1/13 has a new model or new textures.
+	 model wf_geo_000AE0_ in folder wf/areas/1/14 has a new model or new textures.
+	 model wf_geo_0009D0_ in folder wf/areas/1/18 has a new model or new textures.
+	 model wf_geo_000AF8_ in folder wf/beta_extending_platform has a new model or new textures.
+	 model wf_geo_000B10_ in folder wf/extending_platform has a new model or new textures.
+	 model wf_geo_000BA8_ in folder wf/kickable_board has a new model or new textures.
+	 model wf_geo_000BE0_ in folder wf/tower_door has a new model or new textures.
+	 model wf_geo_000A58_ in folder wf/rotating_wooden_platform has a new model or new textures.
+jrb
+	 model jrb_geo_000930_ in folder jrb/rock has a new model or new textures.
+	 model jrb_geo_000900_ in folder jrb/falling_pillar has a new model or new textures.
+	 model jrb_geo_000918_ in folder jrb/falling_pillar_base has a new model or new textures.
+ ttm
+	 model ttm_geo_000778_ in folder ttm/areas/1/4 has a new model or new textures.
+	 model ttm_geo_0007A8_ in folder ttm/areas/1/5 has a new model or new textures.
+	 model ttm_geo_0007D8_ in folder ttm/areas/1/6 has a new model or new textures.
+	 model ttm_geo_0008D0_ in folder ttm/areas/1/12 has a new model or new textures.
+	 model ttm_geo_0008F8_ in folder ttm/areas/1/13 has a new model or new textures.
+	 model ttm_geo_000920_ in folder ttm/areas/1/14 has a new model or new textures.
+	 model ttm_geo_000948_ in folder ttm/areas/1/15 has a new model or new textures.
+	 model ttm_geo_000970_ in folder ttm/areas/1/16 has a new model or new textures.
+	 model ttm_geo_000990_ in folder ttm/areas/1/17 has a new model or new textures.
+	 model ttm_geo_0009C0_ in folder ttm/areas/1/18 has a new model or new textures.
+	 model ttm_geo_0009F0_ in folder ttm/areas/1/19 has a new model or new textures.
+	 model ttm_geo_000A18_ in folder ttm/areas/1/20 has a new model or new textures.
+	 model ttm_geo_000730_ in folder ttm/rolling_log has a new model or new textures.
+	 model ttm_geo_000DBC_ in folder ttm/moon_smiley has a new model or new textures.
+	 model ttm_geo_000DF4_ in folder ttm/slide_exit_podium has a new model or new textures.
  model wiggler_head_geo_ in folder wiggler_head has a new model or new textures.
- model hmc_geo_0005A0_ in folder hmc/arrow_platform has a new model or new textures.
- model hmc_geo_000548_ in folder hmc/rolling_rock has a new model or new textures.
- model hmc_geo_000570_ in folder hmc/rolling_rock_fragment_1 has a new model or new textures.
- model hmc_geo_000588_ in folder hmc/rolling_rock_fragment_2 has a new model or new textures.
- model hmc_geo_000530_ in folder hmc/areas/1/grill_door has a new model or new textures.
+ hmc
+	 model hmc_geo_0005A0_ in folder hmc/arrow_platform has a new model or new textures.
+	 model hmc_geo_000548_ in folder hmc/rolling_rock has a new model or new textures.
+	 model hmc_geo_000570_ in folder hmc/rolling_rock_fragment_1 has a new model or new textures.
+	 model hmc_geo_000588_ in folder hmc/rolling_rock_fragment_2 has a new model or new textures.
+	 model hmc_geo_000530_ in folder hmc/areas/1/grill_door has a new model or new textures.
  model yoshi_egg_geo_ in folder yoshi_egg has a new model or new textures.
- model geo_bbh_0005B0_ in folder bbh/staircase_step has a new model or new textures.
- model geo_bbh_0005C8_ in folder bbh/tilting_trap_platform has a new model or new textures.
- model geo_bbh_0005F8_ in folder bbh/tumbling_platform_near has a new model or new textures.
- model geo_bbh_000610_ in folder bbh/moving_bookshelf has a new model or new textures.
- model geo_bbh_000628_ in folder bbh/mesh_elevator has a new model or new textures.
- model geo_bbh_000640_ in folder bbh/merry_go_round has a new model or new textures.
- model ssl_geo_000734_ in folder ssl/grindel has a new model or new textures.
- model ssl_geo_000764_ in folder ssl/spindel has a new model or new textures.
- model ssl_geo_000630_ in folder ssl_tox_box has a new model or new textures.
+ bbh
+	 model geo_bbh_0005B0_ in folder bbh/staircase_step has a new model or new textures.
+	 model geo_bbh_0005C8_ in folder bbh/tilting_trap_platform has a new model or new textures.
+	 model geo_bbh_0005F8_ in folder bbh/tumbling_platform_near has a new model or new textures.
+	 model geo_bbh_000610_ in folder bbh/moving_bookshelf has a new model or new textures.
+	 model geo_bbh_000628_ in folder bbh/mesh_elevator has a new model or new textures.
+	 model geo_bbh_000640_ in folder bbh/merry_go_round has a new model or new textures.
+ ssl
+	 model ssl_geo_000734_ in folder ssl/grindel has a new model or new textures.
+	 model ssl_geo_000764_ in folder ssl/spindel has a new model or new textures.
+	 model ssl_geo_000630_ in folder ssl_tox_box has a new model or new textures.
  model pokey_head_geo_ in folder pokey has a new model or new textures.
  model eyerok_left_hand_geo_ in folder eyerok has a new model or new textures.
- model lll_geo_000A78_ in folder lll/areas/1/10 has a new model or new textures.
- model lll_geo_000A90_ in folder lll/areas/1/11 has a new model or new textures.
- model lll_geo_000DD0_ in folder lll/sinking_rock_block has a new model or new textures.
- model lll_geo_000BB0_ in folder lll/rotating_hexagonal_ring has a new model or new textures.
- model lll_geo_000BC8_ in folder lll/sinking_rectangular_platform has a new model or new textures.
- model lll_geo_000BE0_ in folder lll/sinking_square_platform has a new model or new textures.
- model lll_geo_000BF8_ in folder lll/tilting_square_platform has a new model or new textures.
- model ddd_geo_000478_ in folder ddd/sub_door has a new model or new textures.
- model ddd_geo_0004A0_ in folder ddd/submarine has a new model or new textures.
+ lll
+	 model lll_geo_000A78_ in folder lll/areas/1/10 has a new model or new textures.
+	 model lll_geo_000A90_ in folder lll/areas/1/11 has a new model or new textures.
+	 model lll_geo_000DD0_ in folder lll/sinking_rock_block has a new model or new textures.
+	 model lll_geo_000BB0_ in folder lll/rotating_hexagonal_ring has a new model or new textures.
+	 model lll_geo_000BC8_ in folder lll/sinking_rectangular_platform has a new model or new textures.
+	 model lll_geo_000BE0_ in folder lll/sinking_square_platform has a new model or new textures.
+	 model lll_geo_000BF8_ in folder lll/tilting_square_platform has a new model or new textures.
+ ddd
+	 model ddd_geo_000478_ in folder ddd/sub_door has a new model or new textures.
+	 model ddd_geo_0004A0_ in folder ddd/submarine has a new model or new textures.
  model bowser_geo_ in folder bowser has a new model or new textures.
- model bowser_3_geo_000380_ in folder bowser_3/areas/1/bomb_stand has a new model or new textures.
- model bowser_3_geo_0002A8_ in folder bowser_3/falling_platform_2 has a new model or new textures.
- model bowser_3_geo_000308_ in folder bowser_3/falling_platform_6 has a new model or new textures.
- model bowser_3_geo_000320_ in folder bowser_3/falling_platform_7 has a new model or new textures.
- model bowser_3_geo_000338_ in folder bowser_3/falling_platform_8 has a new model or new textures.
- model bowser_3_geo_000350_ in folder bowser_3/falling_platform_9 has a new model or new textures.
+ bowser 3
+	 model bowser_3_geo_000380_ in folder bowser_3/areas/1/bomb_stand has a new model or new textures.
+	 model bowser_3_geo_0002A8_ in folder bowser_3/falling_platform_2 has a new model or new textures.
+	 model bowser_3_geo_000308_ in folder bowser_3/falling_platform_6 has a new model or new textures.
+	 model bowser_3_geo_000320_ in folder bowser_3/falling_platform_7 has a new model or new textures.
+	 model bowser_3_geo_000338_ in folder bowser_3/falling_platform_8 has a new model or new textures.
+	 model bowser_3_geo_000350_ in folder bowser_3/falling_platform_9 has a new model or new textures.
 *****************************************************************************
 Collision models are loaded via behavior, not alongside the model. This means it can be more difficult to detect where exactly the collision belongs.
 I attempt to guess based on what model the collision is first used with, but if I'm not sure, it will be logged here.
