@@ -19,7 +19,8 @@ It is expected to have many warnings for editor files and for roms with lots of 
 ******************************************************************************************
 
 Objects without references must have behaviors created for them, be given an existing behavior, or be commented out.
-
+#I've added all of these to custom.behavior_data.inc.h but there are more objects with custom behaviors
+#that overwrite known labels. Almost all of them are just moving solid platforms, are just require new behaviors though.
  Level castle_inside Area 1 has object  Bhv_Custom_0x00402400 with no known label.
  Level bbh Area 1 has object  Bhv_Custom_0x19001200 with no known label.
  Level bbh Area 1 has object  Bhv_Custom_0x1300012c with no known label.
@@ -36,7 +37,8 @@ Objects without references must have behaviors created for them, be given an exi
 
 Levels with fog in sm64 editor and likely early versions of Rom Manager are completely broken and destroy the levels graphics and most non opaque objects.
 I attempt to auto fix these, if there is any issue in these levels check fog first.
-
+#combiners replaced with proper ones for all levels, may cause issues in these levels. Geo layers in these levels
+#also changed.
  Level bbh Display List DL_bbh_1_0xe02c140 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level sl Display List DL_sl_1_0xe0223f0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level thi Display List DL_thi_1_0xe034780 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
@@ -47,6 +49,15 @@ I attempt to auto fix these, if there is any issue in these levels check fog fir
  Level pss Display List DL_pss_1_0xe01d1f0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level cotmc Display List DL_cotmc_1_0xe04b2b0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level bowser_1 Display List DL_bowser_1_1_0xe01d3c0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
+
+*****************************************************************************
+Collision models are loaded via behavior, not alongside the model. This means it can be more difficult to detect where exactly the collision belongs.
+I attempt to guess based on what model the collision is first used with, but if I'm not sure, it will be logged here.
+
+ Collision geo_bbh_0005C8 in folder bbh/tilting_trap_platform is unkown. Used with Behavior Bhv_Custom_0x13001e68.
+ Collision geo_bbh_000640 in folder bbh/merry_go_round is unkown. Used with Behavior Bhv_Custom_0x13000fc0.
+ Collision ddd_geo_000478 in folder ddd/sub_door is unkown. Used with Behavior Bhv_Custom_0x13004854.
+ Collision dorrie_geo in folder dorrie is unkown. Used with Behavior Bhv_Custom_0x13005664.
 
 Known methods of crashing:
 *****************************************************************************
