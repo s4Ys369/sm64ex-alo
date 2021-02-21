@@ -9,7 +9,9 @@
 #define EXIT_COURSE LEVEL_CASTLE, 1, 0x1F
 #define FALL_DAMAGE 1
 #define REDS_REQ 8
-
+//whether coins are 3d or not. Changes bhv scripts and pause menu reds rendering
+#define USE3DCOINS 0
+#define INCLUDE_MOP 0
 //an array
 #define STAR_MILESTONES  1, 3, 8, 30, 50, 70
 #define SHOW_STAR_MILESTONES 1

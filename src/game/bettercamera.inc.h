@@ -195,8 +195,8 @@ void newcam_init_settings(void) {
     newcam_invertY      = (s16)configCameraInvertY;
 #ifndef TARGET_N64
     newcam_mouse        = (u8)configCameraMouse;
+	newcam_analogue     = (s16)configCameraAnalog;
 #endif    
-    newcam_analogue     = (s16)configCameraAnalog;
     newcam_degrade      = (f32)configCameraDegrade;
 
     newcam_toggle(configEnableCamera);
@@ -272,6 +272,13 @@ static void newcam_rotate_button(void)
 {
     f32 intendedXMag;
     f32 intendedYMag;
+    //When you press L and R together, set the flag for centering the camera. Afterwards, start setting the yaw to the Player's yaw at the time.
+    if (((gPlayer1Controller->buttonDown & L_TRIG && gPlayer1Controller->buttonDown & R_TRIG) | (gPlayer1Controller->buttonDown & D_JPAD)) && newcam_modeflags & NC_FLAG_ZOOM)
+    {
+        newcam_yaw_target = -gMarioState->faceAngle[1]-0x4000;
+        newcam_centering = 1;
+		newcam_tilt = 0x800;
+    }
     if ((newcam_modeflags & NC_FLAG_8D || newcam_modeflags & NC_FLAG_4D) && newcam_modeflags & NC_FLAG_XTURN) //8 directional camera rotation input for buttons.
     {
         if ((gPlayer1Controller->buttonPressed & L_CBUTTONS) && newcam_analogue == 0)
@@ -280,9 +287,9 @@ static void newcam_rotate_button(void)
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
             #endif
             if (newcam_modeflags & NC_FLAG_8D)
-                newcam_yaw_target = newcam_yaw_target+(ivrt(newcam_invertX)*0x2000);
+                newcam_yaw_target = newcam_yaw_target+(ivrt(0)*0x2000);
             else
-                newcam_yaw_target = newcam_yaw_target+(ivrt(newcam_invertX)*0x4000);
+                newcam_yaw_target = newcam_yaw_target+(ivrt(0)*0x4000);
             newcam_centering = 1;
         }
         else
@@ -292,9 +299,9 @@ static void newcam_rotate_button(void)
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
             #endif
             if (newcam_modeflags & NC_FLAG_8D)
-                newcam_yaw_target = newcam_yaw_target-(ivrt(newcam_invertX)*0x2000);
+                newcam_yaw_target = newcam_yaw_target-(ivrt(0)*0x2000);
             else
-                newcam_yaw_target = newcam_yaw_target-(ivrt(newcam_invertX)*0x4000);
+                newcam_yaw_target = newcam_yaw_target-(ivrt(0)*0x4000);
             newcam_centering = 1;
         }
 
@@ -305,9 +312,9 @@ static void newcam_rotate_button(void)
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
             #endif
             if (newcam_modeflags & NC_FLAG_8D)
-                newcam_tilt = newcam_tilt+(ivrt(newcam_invertY)*0x800);
+                newcam_tilt = newcam_tilt+(ivrt(1)*0x800);
             else
-                newcam_tilt = newcam_tilt+(ivrt(newcam_invertY)*0x1000);
+                newcam_tilt = newcam_tilt+(ivrt(1)*0x1000);
             newcam_centering = 1;
         }
         else
@@ -317,9 +324,9 @@ static void newcam_rotate_button(void)
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
             #endif
             if (newcam_modeflags & NC_FLAG_8D)
-                newcam_tilt = newcam_tilt-(ivrt(newcam_invertY)*0x800);
+                newcam_tilt = newcam_tilt-(ivrt(1)*0x800);
             else
-                newcam_tilt = newcam_tilt-(ivrt(newcam_invertY)*0x1000);
+                newcam_tilt = newcam_tilt-(ivrt(1)*0x1000);
             newcam_centering = 1;
         }
 		
@@ -363,7 +370,7 @@ static void newcam_rotate_button(void)
     {
         if (newcam_framessincec[0] < 6)
         {
-            newcam_yaw_target = newcam_yaw+(ivrt(newcam_invertX)*0x3000);
+            newcam_yaw_target = newcam_yaw+(ivrt(0)*0x3000);
             newcam_centering = 1;
             #ifndef nosound
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
@@ -375,7 +382,7 @@ static void newcam_rotate_button(void)
     {
         if (newcam_framessincec[1] < 6)
             {
-            newcam_yaw_target = newcam_yaw-(ivrt(newcam_invertX)*0x3000);
+            newcam_yaw_target = newcam_yaw-(ivrt(0)*0x3000);
             newcam_centering = 1;
             #ifndef nosound
             play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource);
@@ -383,7 +390,6 @@ static void newcam_rotate_button(void)
         }
         newcam_framessincec[1] = 0;
     }
-
 
     if (newcam_analogue == 1) //There's not much point in keeping this behind a check, but it wouldn't hurt, just incase any 2player shenanigans ever happen, it makes it easy to disable.
     { //The joystick values cap at 80, so divide by 8 to get the same net result at maximum turn as the button
@@ -404,16 +410,16 @@ static void newcam_rotate_button(void)
                     if (newcam_stick2[0] > 20)
                     {
                         if (newcam_modeflags & NC_FLAG_8D)
-                            newcam_yaw_target = newcam_yaw_target+(ivrt(newcam_invertX)*0x2000);
+                            newcam_yaw_target = newcam_yaw_target+(ivrt(0)*0x2000);
                         else
-                            newcam_yaw_target = newcam_yaw_target+(ivrt(newcam_invertX)*0x4000);
+                            newcam_yaw_target = newcam_yaw_target+(ivrt(0)*0x4000);
                     }
                     else
                     {
                         if (newcam_modeflags & NC_FLAG_8D)
-                            newcam_yaw_target = newcam_yaw_target-(ivrt(newcam_invertX)*0x2000);
+                            newcam_yaw_target = newcam_yaw_target-(ivrt(0)*0x2000);
                         else
-                            newcam_yaw_target = newcam_yaw_target-(ivrt(newcam_invertX)*0x4000);
+                            newcam_yaw_target = newcam_yaw_target-(ivrt(0)*0x4000);
                     }
                 }
             }
@@ -462,12 +468,6 @@ static void newcam_zoom_button(void)
             newcam_distance = newcam_distance_target;
     }
 
-    //When you press L and R together, set the flag for centering the camera. Afterwards, start setting the yaw to the Player's yaw at the time.
-    if (gPlayer1Controller->buttonDown & L_TRIG && gPlayer1Controller->buttonDown & R_TRIG && newcam_modeflags & NC_FLAG_ZOOM)
-    {
-        newcam_yaw_target = -gMarioState->faceAngle[1]-0x4000;
-        newcam_centering = 1;
-    }
     // else //Each time the player presses R, but NOT L the camera zooms out more, until it hits the limit and resets back to close view.
     if (gPlayer1Controller->buttonPressed & R_TRIG && newcam_modeflags & NC_FLAG_XTURN)
     {
@@ -510,7 +510,12 @@ static void newcam_zoom_button(void)
 static void newcam_update_values(void) {
     //For tilt, this just limits it so it doesn't go further than 90 degrees either way. 90 degrees is actually 16384, but can sometimes lead to issues, so I just leave it shy of 90.
     u8 waterflag = 0;
-
+	newcam_toggle(configEnableCamera);
+	if (!newcam_active){
+		newcam_xlu = 255;
+		gCurrentArea->camera->mode = CAMERA_MODE_8_DIRECTIONS;
+		init_camera(gCurrentArea->camera);
+	}
     if (newcam_modeflags & NC_FLAG_XTURN)
         newcam_yaw -= ((newcam_yaw_acc*(newcam_sensitivityX/10))*ivrt(0));
     if (((newcam_tilt <= 12000) && (newcam_tilt >= -12000)) && newcam_modeflags & NC_FLAG_YTURN)
@@ -681,7 +686,7 @@ static void newcam_position_cam(void) {
 
     if (newcam_modeflags & NC_FLAG_COLLISION) {
         newcam_collision();
-        newcam_bounding_box();
+        // newcam_bounding_box();
     }
 
 }

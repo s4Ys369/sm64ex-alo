@@ -34,6 +34,15 @@ When using the data from RM2C, make sure to set RM2C to 1 in the makefile.
  * Various defines added to accept RM2C output configurations in single config file
 
 ## Building
+
+### Recommended BUILD cmds
+
+ 1. WINDOWS_BUILD
+	* make clean && make RM2CPC
+ 2. N64 BUILD
+	* make -j4 RM2C=1
+
+
  * To build for sm64ex platforms, [click here](https://github.com/sm64pc/sm64ex/blob/nightly/README.md).
  * To build for N64, [click here](https://github.com/n64decomp/sm64/blob/master/README.md). (TARGET_N64=1)
  * To build for Wii U, [click here](https://github.com/aboood40091/sm64-port/blob/master/README.md). (TARGET_WII_U=1)

@@ -263,7 +263,7 @@ void handle_save_menu(struct MarioState *m) {
         }
 
         // continue no save
-        if (gSaveOptSelectIndex == SAVE_OPT_CONTINUE_DONT_SAVE) {
+        if (gSaveOptSelectIndex != SAVE_OPT_SAVE_AND_QUIT) {
             disable_time_stop();
             m->faceAngle[1] += 0x8000;
             // figure out what dialog to show, if we should

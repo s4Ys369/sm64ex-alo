@@ -70,6 +70,13 @@ DECLARE_LEVEL_SEGMENT(ending)
 
 #undef DEFINE_LEVEL
 
+#define MIO0_SEG(name, addr) \
+    extern u8 _##name##_mio0SegmentRomStart[]; \
+    extern u8 _##name##_mio0SegmentRomEnd[];
+
+#include "textures/skyboxes/Skybox_Rules.ld"
+
+#undef MiO0_SEG
 
 DECLARE_SEGMENT(segment2_mio0)
 

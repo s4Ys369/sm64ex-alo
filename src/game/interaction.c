@@ -741,7 +741,9 @@ void reset_mario_pitch(struct MarioState *m) {
 
 u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
     m->numCoins += o->oDamageOrCoinValue;
+	#ifndef COINS_NO_HEAL
     m->healCounter += 4 * o->oDamageOrCoinValue;
+	#endif
 
     o->oInteractStatus = INT_STATUS_INTERACTED;
 
@@ -1505,20 +1507,9 @@ u32 interact_pole(struct MarioState *m, UNUSED u32 interactType, struct Object *
     s32 actionId = m->action & ACT_ID_MASK;
     if (actionId >= 0x080 && actionId < 0x0A0) {
         if (!(m->prevAction & ACT_FLAG_ON_POLE) || m->usedObj != o) {
-#if SH_CHANGES
-            f32 velConv = m->forwardVel; // conserve the velocity.
-            struct Object *marioObj = m->marioObj;
-            u32 lowSpeed;
-#else
             u32 lowSpeed = (m->forwardVel <= 10.0f);
             struct Object *marioObj = m->marioObj;
-#endif
-
             mario_stop_riding_and_holding(m);
-
-#if SH_CHANGES
-            lowSpeed = (velConv <= 10.0f);
-#endif
 
             m->interactObj = o;
             m->usedObj = o;
@@ -1535,11 +1526,7 @@ u32 interact_pole(struct MarioState *m, UNUSED u32 interactType, struct Object *
 
             //! @bug Using m->forwardVel here is assumed to be 0.0f due to the set from earlier.
             //       This is fixed in the Shindou version.
-#if SH_CHANGES
-            marioObj->oMarioPoleYawVel = (s32)(velConv * 0x100 + 0x1000);
-#else
             marioObj->oMarioPoleYawVel = (s32)(m->forwardVel * 0x100 + 0x1000);
-#endif
             reset_mario_pitch(m);
 #ifdef RUMBLE_FEEDBACK
             queue_rumble_data(5, 80);

@@ -242,8 +242,8 @@ static void optvideo_apply(UNUSED struct Option *self, s32 arg) {
 #ifdef BETTERCAMERA
 static struct Option optsCamera[] = {
     DEF_OPT_TOGGLE( optsCameraStr[9], &configEnableCamera ),
-    DEF_OPT_TOGGLE( optsCameraStr[6], &configCameraAnalog ),
 #ifndef TARGET_N64
+	DEF_OPT_TOGGLE( optsCameraStr[6], &configCameraAnalog ),
     DEF_OPT_TOGGLE( optsCameraStr[7], &configCameraMouse ),
 #endif
     DEF_OPT_TOGGLE( optsCameraStr[2], &configCameraInvertX ),
