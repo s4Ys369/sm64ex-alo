@@ -6221,7 +6221,7 @@ const BehaviorScript bhvIntroScene[] = {
         CALL_NATIVE(bhv_intro_scene_loop),
     END_LOOP(),
 };
-
+#include "custom.behavior_data.inc.h"
 #if INCLUDE_MOP
 //bhvUnused05A8 is basically a stub.
 //SPAWN_CHILD(ID,bhvUnused05A8) to spawn model parts

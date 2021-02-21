@@ -3,6 +3,17 @@
 
 #include "types.h"
 
+extern const BehaviorScript Bhv_Custom_0x13005664[];
+extern const BehaviorScript Bhv_Custom_0x13004854[];
+extern const BehaviorScript Bhv_Custom_0x13000fc0[];
+extern const BehaviorScript Bhv_Custom_0x13004cc8[];
+extern const BehaviorScript Bhv_Custom_0x13001e68[];
+extern const BehaviorScript Bhv_Custom_0x1300496c[];
+extern const BehaviorScript Bhv_Custom_0x13001418[];
+extern const BehaviorScript Bhv_Custom_0x13000684[];
+extern const BehaviorScript Bhv_Custom_0x13003b70[];
+extern const BehaviorScript Bhv_Custom_0x1300012c[];
+
 extern const BehaviorScript editor_Scroll_Texture[];
 extern const BehaviorScript RM_Scroll_Texture[];
 extern const BehaviorScript bhvStarDoor[];

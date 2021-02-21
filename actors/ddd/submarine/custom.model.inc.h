@@ -1,0 +1,57 @@
+#ifndef ddd_submarine_model_HEADER_H
+#define ddd_submarine_model_HEADER_H
+#include "types.h"
+extern Vtx VB_ddd_geo_0004A0_0x7009300[];
+extern Vtx VB_ddd_geo_0004A0_0x70093f0[];
+extern Vtx VB_ddd_geo_0004A0_0x70094e0[];
+extern Vtx VB_ddd_geo_0004A0_0x70095d0[];
+extern Vtx VB_ddd_geo_0004A0_0x70096c0[];
+extern Vtx VB_ddd_geo_0004A0_0x70097b0[];
+extern Vtx VB_ddd_geo_0004A0_0x70098a0[];
+extern Vtx VB_ddd_geo_0004A0_0x7009990[];
+extern Vtx VB_ddd_geo_0004A0_0x7009a80[];
+extern Vtx VB_ddd_geo_0004A0_0x7009b70[];
+extern Vtx VB_ddd_geo_0004A0_0x7009c60[];
+extern Vtx VB_ddd_geo_0004A0_0x7009d50[];
+extern Vtx VB_ddd_geo_0004A0_0x7009e40[];
+extern Vtx VB_ddd_geo_0004A0_0x7009f30[];
+extern Vtx VB_ddd_geo_0004A0_0x700a020[];
+extern Vtx VB_ddd_geo_0004A0_0x700a110[];
+extern Vtx VB_ddd_geo_0004A0_0x700a200[];
+extern Vtx VB_ddd_geo_0004A0_0x700a2f0[];
+extern Vtx VB_ddd_geo_0004A0_0x700a3e0[];
+extern Vtx VB_ddd_geo_0004A0_0x700a4d0[];
+extern Vtx VB_ddd_geo_0004A0_0x700a5c0[];
+extern Vtx VB_ddd_geo_0004A0_0x700a6b0[];
+extern Vtx VB_ddd_geo_0004A0_0x700a7a0[];
+extern Vtx VB_ddd_geo_0004A0_0x700a890[];
+extern Vtx VB_ddd_geo_0004A0_0x700a980[];
+extern Vtx VB_ddd_geo_0004A0_0x700aa70[];
+extern Vtx VB_ddd_geo_0004A0_0x700ab60[];
+extern Vtx VB_ddd_geo_0004A0_0x700ac50[];
+extern Vtx VB_ddd_geo_0004A0_0x700ad40[];
+extern Vtx VB_ddd_geo_0004A0_0x700ae30[];
+extern Vtx VB_ddd_geo_0004A0_0x700af20[];
+extern Vtx VB_ddd_geo_0004A0_0x700b010[];
+extern Vtx VB_ddd_geo_0004A0_0x700b100[];
+extern Vtx VB_ddd_geo_0004A0_0x700b1f0[];
+extern Vtx VB_ddd_geo_0004A0_0x700b2e0[];
+extern Vtx VB_ddd_geo_0004A0_0x700b3d0[];
+extern Vtx VB_ddd_geo_0004A0_0x700b4c0[];
+extern Vtx VB_ddd_geo_0004A0_0x700b5b0[];
+extern Vtx VB_ddd_geo_0004A0_0x700b6a0[];
+extern Vtx VB_ddd_geo_0004A0_0x700b790[];
+extern Vtx VB_ddd_geo_0004A0_0x700b880[];
+extern Vtx VB_ddd_geo_0004A0_0x700b970[];
+extern Vtx VB_ddd_geo_0004A0_0x700ba60[];
+extern Vtx VB_ddd_geo_0004A0_0x700bb50[];
+extern Vtx VB_ddd_geo_0004A0_0x700bc40[];
+extern Vtx VB_ddd_geo_0004A0_0x700bd30[];
+extern Vtx VB_ddd_geo_0004A0_0x700be20[];
+extern Vtx VB_ddd_geo_0004A0_0x700bf10[];
+extern u8 ddd_geo_0004A0__texture_0700D754[];
+extern u8 ddd_geo_0004A0__texture_0700DF54[];
+extern u8 ddd_geo_0004A0__texture_0700E754[];
+extern Light_t Light_ddd_geo_0004A0_0x700cbe0;
+extern Gfx DL_ddd_geo_0004A0_0x700c000[];
+#endif
