@@ -25,6 +25,7 @@ extern const Trajectory lll_seg7_trajectory_0702856C_RM2C_path[];
 extern const Trajectory lll_seg7_trajectory_07028660_RM2C_path[];
 extern const Trajectory rr_seg7_trajectory_0702ED9C_RM2C_path[];
 extern const Trajectory rr_seg7_trajectory_0702EEE0_RM2C_path[];
+extern const Trajectory ccm_seg7_trajectory_penguin_race_RM2C_path[];
 #endif
 
 void shelled_koopa_attack_handler(s32 attackType);
