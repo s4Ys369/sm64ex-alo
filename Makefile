@@ -44,7 +44,7 @@ DOUBLE_LAVA_DMG ?= 0
 DOUBLE_KOOPA_SPEED ?= 0
 #Basically chaos edition but light. Only edits that are manageable e.g. messing with mario's model/size/colors
 #or his physics somewhat. Two edits at a time, swaps out on 15s timer.
-CHAOS_LITE ?= 1
+CHAOS_LITE ?= 0
 #Pannen meme challenges. These cause the equivalent button press to remove 1 HP
 A_BTN_DRAIN ?= 0
 B_BTN_DRAIN ?= 0
