@@ -14,11 +14,14 @@ enum FlyingCarpetState
 extern s8 gFlyingCarpetState;
 
 #define MIO0_SEG(name, addr) \
-    name##_Index
+    name##_Index, \
 
-enum Custom_Skybox_Indices = {
+
+enum Custom_Skybox_Indices{
 #include "textures/skyboxes/Skybox_Rules.ld"
-}
+};
+
+#undef MIO0_SEG
 
 
 #ifndef GBI_FLOATS
