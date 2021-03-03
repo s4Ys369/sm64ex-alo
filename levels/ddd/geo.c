@@ -14,7 +14,9 @@
 #include "levels/ddd/header.h"
 
 #include "levels/ddd/pole/geo.inc.c"
-#include "levels/ddd/sub_door/geo.inc.c"
-#include "levels/ddd/submarine/geo.inc.c"
+#include "levels/ddd/sub_door/custom.model.inc.h"
+#include "levels/ddd/sub_door/custom.geo.inc.c"
+#include "levels/ddd/submarine/custom.model.inc.h"
+#include "levels/ddd/submarine/custom.geo.inc.c"
 #include "levels/ddd/areas/1/geo.inc.c"
 #include "levels/ddd/areas/2/geo.inc.c"

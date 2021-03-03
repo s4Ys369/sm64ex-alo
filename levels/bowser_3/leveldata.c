@@ -10,7 +10,7 @@
 #include "make_const_nonconst.h"
 #include "levels/bowser_3/texture.inc.c"
 #include "levels/bowser_3/falling_platform_1/model.inc.c"
-#include "levels/bowser_3/falling_platform_2/model.inc.c"
+#include "levels/bowser_3/falling_platform_2/custom.model.inc.c"
 #include "levels/bowser_3/falling_platform_3/model.inc.c"
 #include "levels/bowser_3/falling_platform_4/model.inc.c"
 #include "levels/bowser_3/falling_platform_5/model.inc.c"

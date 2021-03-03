@@ -869,6 +869,7 @@ void initiate_delayed_warp(void) {
             switch (sDelayedWarpOp) {
                 case WARP_OP_GAME_OVER:
                     save_file_reload();
+					init_mario_from_save_file();
                     warp_special(-3);
                     break;
 

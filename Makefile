@@ -28,7 +28,7 @@ NON_MATCHING ?= 1
 COMPILER_N64 ?= gcc
 
 # Accept RM2C level folder output
-RM2C ?= 0
+RM2C ?= 1
 
 #Game wide edits to add optional challenges
 

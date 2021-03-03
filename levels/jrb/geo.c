@@ -13,9 +13,12 @@
 
 #include "levels/jrb/header.h"
 
-#include "levels/jrb/falling_pillar/geo.inc.c"
-#include "levels/jrb/falling_pillar_base/geo.inc.c"
-#include "levels/jrb/rock/geo.inc.c"
+#include "levels/jrb/falling_pillar/custom.model.inc.h"
+#include "levels/jrb/falling_pillar/custom.geo.inc.c"
+#include "levels/jrb/falling_pillar_base/custom.model.inc.h"
+#include "levels/jrb/falling_pillar_base/custom.geo.inc.c"
+#include "levels/jrb/rock/custom.model.inc.h"
+#include "levels/jrb/rock/custom.geo.inc.c"
 #include "levels/jrb/floating_platform/geo.inc.c"
 #include "levels/jrb/sliding_box/geo.inc.c"
 #include "levels/jrb/wooden_ship/geo.inc.c"

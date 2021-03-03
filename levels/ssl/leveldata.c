@@ -1,15 +1,12 @@
-#include <PR/ultratypes.h>
-#include <PR/gbi.h>
-
-#include "dialog_ids.h"
-#include "level_misc_macros.h"
-#include "macros.h"
-#include "macro_preset_names.h"
-#include "moving_texture_macros.h"
-#include "special_preset_names.h"
+#include <ultra64.h>
+#include "sm64.h"
 #include "surface_terrains.h"
+#include "moving_texture_macros.h"
+#include "level_misc_macros.h"
+#include "macro_preset_names.h"
+#include "special_preset_names.h"
 #include "textures.h"
-#include "types.h"
+#include "dialog_ids.h"
 
 #include "make_const_nonconst.h"
 // LEVEL DATA
@@ -23,7 +20,8 @@
 #include "levels/ssl/areas/1/3/model.inc.c"
 #include "levels/ssl/areas/1/4/model.inc.c"
 #include "levels/ssl/pyramid_top/model.inc.c"
-#include "levels/ssl/tox_box/model.inc.c"
+#include "levels/ssl/tox_box/custom.model.inc.h"
+#include "levels/ssl/tox_box/custom.model.inc.c"
 #include "levels/ssl/areas/1/collision.inc.c"
 #include "levels/ssl/areas/1/macro.inc.c"
 #include "levels/ssl/pyramid_top/collision.inc.c"
@@ -34,8 +32,10 @@
 #include "levels/ssl/areas/2/3/model.inc.c"
 #include "levels/ssl/areas/3/1/model.inc.c"
 #include "levels/ssl/areas/3/2/model.inc.c"
-#include "levels/ssl/grindel/model.inc.c"
-#include "levels/ssl/spindel/model.inc.c"
+#include "levels/ssl/grindel/custom.model.inc.h"
+#include "levels/ssl/grindel/custom.model.inc.c"
+#include "levels/ssl/spindel/custom.model.inc.h"
+#include "levels/ssl/spindel/custom.model.inc.c"
 #include "levels/ssl/moving_pyramid_wall/model.inc.c"
 #include "levels/ssl/pyramid_elevator/model.inc.c"
 #include "levels/ssl/eyerok_col/model.inc.c" // Blank file
@@ -43,9 +43,9 @@
 #include "levels/ssl/areas/3/collision.inc.c"
 #include "levels/ssl/areas/2/macro.inc.c"
 #include "levels/ssl/areas/3/macro.inc.c"
-#include "levels/ssl/grindel/collision.inc.c"
-#include "levels/ssl/spindel/collision.inc.c"
-#include "levels/ssl/moving_pyramid_wall/collision.inc.c"
+#include "levels/ssl/grindel/custom.collision.inc.c"
+#include "levels/ssl/spindel/custom.collision.inc.c"
+#include "levels/ssl/moving_pyramid_wall/custom.collision.inc.c"
 #include "levels/ssl/pyramid_elevator/collision.inc.c"
 #include "levels/ssl/eyerok_col/collision.inc.c"
 #include "levels/ssl/areas/2/movtext.inc.c"
