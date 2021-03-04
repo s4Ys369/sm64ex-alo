@@ -2,7 +2,7 @@
 #define DDD_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_ddd_1_0x2049fd0[];
+extern const GeoLayout Geo_ddd_1_0x22a1700[];
 extern Gfx DL_ddd_1_0xe028540[];
 extern Gfx DL_ddd_1_0xe039e90[];
 extern const Collision col_ddd_1_0xe033410[];

@@ -2,7 +2,7 @@
 #define BOB_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_bob_1_0x1241a20[];
+extern const GeoLayout Geo_bob_1_0x1661700[];
 extern Gfx DL_bob_1_0xe029db0[];
 extern Gfx DL_bob_1_0xe03dc20[];
 extern const Collision col_bob_1_0xe037a40[];

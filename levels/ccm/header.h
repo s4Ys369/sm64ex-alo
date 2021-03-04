@@ -2,7 +2,7 @@
 #define CCM_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_ccm_1_0xe92770[];
+extern const GeoLayout Geo_ccm_1_0x12e1700[];
 extern Gfx DL_ccm_1_0xe026bb0[];
 extern Gfx DL_ccm_1_0xe035ae0[];
 extern const Collision col_ccm_1_0xe030fe8[];

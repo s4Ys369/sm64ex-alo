@@ -1,10 +1,10 @@
 #ifndef exclamation_box_outline_exclamation_box_outline_model_HEADER_H
 #define exclamation_box_outline_exclamation_box_outline_model_HEADER_H
 #include "types.h"
-extern Vtx VB_exclamation_box_outline_geo_0x8024d18[];
-extern Vtx VB_exclamation_box_outline_geo_0x8024e08[];
-extern Vtx VB_exclamation_box_outline_geo_0x8025008[];
-extern Vtx VB_exclamation_box_outline_geo_0x80250e8[];
+extern Vtx VB_exclamation_box_outline_seg8_dl_08025F08_0x8024d18[];
+extern Vtx VB_exclamation_box_outline_seg8_dl_08025F08_0x8024e08[];
+extern Vtx VB_exclamation_box_outline_seg8_dl_08025F08_0x8025008[];
+extern Vtx VB_exclamation_box_outline_seg8_dl_08025F08_0x80250e8[];
 extern Vtx VB_exclamation_box_outline_seg8_dl_08025F08_0x8025e80[];
 extern Light_t Light_exclamation_box_outline_geo_0x8024cc0;
 extern Ambient_t Light_exclamation_box_outline_geo_0x8024cb8;

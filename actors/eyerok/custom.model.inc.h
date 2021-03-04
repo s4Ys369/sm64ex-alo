@@ -1,22 +1,22 @@
 #ifndef eyerok_eyerok_model_HEADER_H
 #define eyerok_eyerok_model_HEADER_H
 #include "types.h"
-extern Vtx VB_eyerok_left_hand_geo_0x500c400[];
-extern Vtx VB_eyerok_left_hand_geo_0x500c4f0[];
-extern Vtx VB_eyerok_left_hand_geo_0x500bd10[];
-extern Vtx VB_eyerok_left_hand_geo_0x500be00[];
-extern Vtx VB_eyerok_left_hand_geo_0x500bf88[];
-extern Vtx VB_eyerok_left_hand_geo_0x500c188[];
-extern Vtx VB_eyerok_left_hand_geo_0x500c278[];
-extern Vtx VB_eyerok_left_hand_geo_0x500c6c8[];
-extern Vtx VB_eyerok_left_hand_geo_0x500c7b8[];
-extern Vtx VB_eyerok_left_hand_geo_0x500c978[];
-extern Vtx VB_eyerok_left_hand_geo_0x500ba48[];
-extern Vtx VB_eyerok_left_hand_geo_0x500bb38[];
-extern Vtx VB_eyerok_left_hand_geo_0x500b558[];
-extern Vtx VB_eyerok_left_hand_geo_0x500b648[];
-extern Vtx VB_eyerok_left_hand_geo_0x500b7d0[];
-extern Vtx VB_eyerok_left_hand_geo_0x500b8c0[];
+extern Vtx VB_eyerok_right_hand_geo_0x500b558[];
+extern Vtx VB_eyerok_right_hand_geo_0x500b648[];
+extern Vtx VB_eyerok_right_hand_geo_0x500b7d0[];
+extern Vtx VB_eyerok_right_hand_geo_0x500b8c0[];
+extern Vtx VB_eyerok_right_hand_geo_0x500ba48[];
+extern Vtx VB_eyerok_right_hand_geo_0x500bb38[];
+extern Vtx VB_eyerok_right_hand_geo_0x500bd10[];
+extern Vtx VB_eyerok_right_hand_geo_0x500be00[];
+extern Vtx VB_eyerok_right_hand_geo_0x500bf88[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c188[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c278[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c400[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c4f0[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c6c8[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c7b8[];
+extern Vtx VB_eyerok_right_hand_geo_0x500c978[];
 extern Gfx DL_eyerok_left_hand_geo_0x500cc18[];
 extern u8 eyerok_left_hand_geo__texture_05008D40[];
 extern Light_t Light_eyerok_left_hand_geo_0x500c3f0;

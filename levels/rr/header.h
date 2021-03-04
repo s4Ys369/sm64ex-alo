@@ -2,7 +2,7 @@
 #define RR_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_rr_1_0x18663c0[];
+extern const GeoLayout Geo_rr_1_0x1ba1700[];
 extern Gfx DL_rr_1_0xe06e8c0[];
 extern Gfx DL_rr_1_0xe096f00[];
 extern const Collision col_rr_1_0xe087ab0[];

@@ -1,9 +1,6 @@
 ALIGNED8 u8 bob_1__texture_0E000010[] = {
 #include "levels/bob/bob_1_0xe000010_custom.rgba16.inc.c"
 };
-ALIGNED8 u8 bob_1__texture_09009800[] = {
-#include "levels/bob/bob_1_0x9009800_custom.rgba16.inc.c"
-};
 ALIGNED8 u8 bob_1__texture_0E000810[] = {
 #include "levels/bob/bob_1_0xe000810_custom.rgba16.inc.c"
 };
@@ -25,11 +22,11 @@ ALIGNED8 u8 bob_1__texture_0E004810[] = {
 ALIGNED8 u8 bob_1__texture_0E005010[] = {
 #include "levels/bob/bob_1_0xe005010_custom.rgba16.inc.c"
 };
-ALIGNED8 u8 bob_1__texture_0E006010[] = {
-#include "levels/bob/bob_1_0xe006010_custom.rgba16.inc.c"
-};
 ALIGNED8 u8 bob_1__texture_0E006810[] = {
 #include "levels/bob/bob_1_0xe006810_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bob_1__texture_0E006010[] = {
+#include "levels/bob/bob_1_0xe006010_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 bob_1__texture_0E007010[] = {
 #include "levels/bob/bob_1_0xe007010_custom.rgba16.inc.c"
@@ -40,14 +37,17 @@ ALIGNED8 u8 bob_1__texture_0E007810[] = {
 ALIGNED8 u8 bob_1__texture_0E008010[] = {
 #include "levels/bob/bob_1_0xe008010_custom.rgba16.inc.c"
 };
+ALIGNED8 u8 bob_1__texture_09009800[] = {
+#include "levels/bob/bob_1_0x9009800_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bob_1__texture_0E009810[] = {
+#include "levels/bob/bob_1_0xe009810_custom.rgba16.inc.c"
+};
 ALIGNED8 u8 bob_1__texture_0E008810[] = {
 #include "levels/bob/bob_1_0xe008810_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 bob_1__texture_0E009010[] = {
 #include "levels/bob/bob_1_0xe009010_custom.rgba16.inc.c"
-};
-ALIGNED8 u8 bob_1__texture_0E009810[] = {
-#include "levels/bob/bob_1_0xe009810_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 bob_1__texture_0E00A010[] = {
 #include "levels/bob/bob_1_0xe00a010_custom.rgba16.inc.c"
@@ -60,4 +60,13 @@ ALIGNED8 u8 bob_1__texture_0E00A810[] = {
 };
 ALIGNED8 u8 bob_1__texture_0E00B010[] = {
 #include "levels/bob/bob_1_0xe00b010_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bob_geo_000440__texture_09008800[] = {
+#include "levels/bob/bob_geo_000440_0x9008800_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bob_geo_000458__texture_09006000[] = {
+#include "levels/bob/bob_geo_000458_0x9006000_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bob_geo_000470__texture_09008800[] = {
+#include "levels/bob/bob_geo_000470_0x9008800_custom.rgba16.inc.c"
 };

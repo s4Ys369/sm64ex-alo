@@ -2,7 +2,7 @@
 #define BBH_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_bbh_1_0xd6e140[];
+extern const GeoLayout Geo_bbh_1_0x1201700[];
 extern Gfx DL_bbh_1_0xe02c140[];
 extern Gfx DL_bbh_1_0xe043110[];
 extern const Collision col_bbh_1_0xe03c6f0[];

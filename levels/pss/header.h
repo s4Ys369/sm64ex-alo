@@ -2,7 +2,7 @@
 #define PSS_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_pss_1_0x24006b0[];
+extern const GeoLayout Geo_pss_1_0x2621700[];
 extern Gfx DL_pss_1_0xe01d1f0[];
 extern const Collision col_pss_1_0xe026508[];
 extern struct MovtexQuadCollection pss_1_Movtex_0[];

@@ -1,6 +1,3 @@
-ALIGNED8 u8 ddd_1__texture_09003000[] = {
-#include "levels/ddd/ddd_1_0x9003000_custom.rgba16.inc.c"
-};
 ALIGNED8 u8 ddd_1__texture_0E000010[] = {
 #include "levels/ddd/ddd_1_0xe000010_custom.rgba16.inc.c"
 };
@@ -24,6 +21,9 @@ ALIGNED8 u8 ddd_1__texture_0E003810[] = {
 };
 ALIGNED8 u8 ddd_1__texture_0E004010[] = {
 #include "levels/ddd/ddd_1_0xe004010_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 ddd_1__texture_09003000[] = {
+#include "levels/ddd/ddd_1_0x9003000_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 ddd_1__texture_0E004810[] = {
 #include "levels/ddd/ddd_1_0xe004810_custom.rgba16.inc.c"

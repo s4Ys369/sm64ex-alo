@@ -2,7 +2,7 @@
 #define BITS_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_bits_1_0x1e56f40[];
+extern const GeoLayout Geo_bits_1_0x20e1700[];
 extern Gfx DL_bits_1_0xe025ca0[];
 extern Gfx DL_bits_1_0xe033110[];
 extern const Collision col_bits_1_0xe02e440[];

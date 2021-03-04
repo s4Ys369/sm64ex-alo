@@ -2,7 +2,7 @@
 #define ENDING_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_ending_1_0x223c350[];
+extern const GeoLayout Geo_ending_1_0x2461700[];
 extern Gfx DL_ending_1_0xe063110[];
 extern Gfx DL_ending_1_0xe082470[];
 extern const Collision col_ending_1_0xe079bc0[];

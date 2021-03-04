@@ -2,7 +2,7 @@
 #define CASTLE_COURTYARD_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_castle_courtyard_1_0x231e500[];
+extern const GeoLayout Geo_castle_courtyard_1_0x2541700[];
 extern Gfx DL_castle_courtyard_1_0xe072a00[];
 extern Gfx DL_castle_courtyard_1_0xe08fbb0[];
 extern const Collision col_castle_courtyard_1_0xe084408[];

@@ -2,7 +2,7 @@
 #define TOTWC_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_totwc_1_0x263c580[];
+extern const GeoLayout Geo_totwc_1_0x27e1700[];
 extern Gfx DL_totwc_1_0xe055420[];
 extern Gfx DL_totwc_1_0xe078e20[];
 extern const Collision col_totwc_1_0xe06d978[];

@@ -13,16 +13,15 @@
 
 #include "areas/1/custom.model.inc.h"
 #include "levels/wf/header.h"
-#include "levels/bob/header.h"
 extern u8 _wf_segment_ESegmentRomStart[]; 
 extern u8 _wf_segment_ESegmentRomEnd[];
-#include "levels/bbh/header.h"
+#include "levels/bob/header.h"
 const LevelScript level_wf_custom_entry[] = {
 INIT_LEVEL(),
-LOAD_MIO0(0x07, _bbh_segment_7SegmentRomStart, _bbh_segment_7SegmentRomEnd),
-LOAD_RAW(0x1A, _bbhSegmentRomStart, _bbhSegmentRomEnd),
+LOAD_MIO0(0x07, _bob_segment_7SegmentRomStart, _bob_segment_7SegmentRomEnd),
+LOAD_RAW(0x1A, _bobSegmentRomStart, _bobSegmentRomEnd),
 LOAD_RAW(0x0E, _wf_segment_ESegmentRomStart, _wf_segment_ESegmentRomEnd),
-LOAD_MIO0(0xA,_water_skybox_mio0SegmentRomStart,_water_skybox_mio0SegmentRomEnd),
+LOAD_MIO0(0xA,_cloud_floor_skybox_mio0SegmentRomStart,_cloud_floor_skybox_mio0SegmentRomEnd),
 LOAD_MIO0(8,_common0_mio0SegmentRomStart,_common0_mio0SegmentRomEnd),
 LOAD_RAW(15,_common0_geoSegmentRomStart,_common0_geoSegmentRomEnd),
 LOAD_MIO0(5,_group11_mio0SegmentRomStart,_group11_mio0SegmentRomEnd),
@@ -31,15 +30,10 @@ LOAD_MIO0(6,_group14_mio0SegmentRomStart,_group14_mio0SegmentRomEnd),
 LOAD_RAW(13,_group14_geoSegmentRomStart,_group14_geoSegmentRomEnd),
 ALLOC_LEVEL_POOL(),
 MARIO(/*model*/ MODEL_MARIO, /*behParam*/ 0x00000001, /*beh*/ bhvMario),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_HAUNTED_DOOR,           haunted_door_geo),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_STAIRCASE_STEP,         geo_bbh_0005B0),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_TILTING_FLOOR_PLATFORM, geo_bbh_0005C8),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM,      geo_bbh_0005E0),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM_PART, geo_bbh_0005F8),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_MOVING_BOOKSHELF,       geo_bbh_000610),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_MESH_ELEVATOR,          geo_bbh_000628),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_MERRY_GO_ROUND,         geo_bbh_000640),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_WOODEN_TOMB,            geo_bbh_000658),
+LOAD_MODEL_FROM_GEO(MODEL_BOB_BUBBLY_TREE,      bubbly_tree_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_BOB_CHAIN_CHOMP_GATE, bob_geo_000440),
+    LOAD_MODEL_FROM_GEO(MODEL_BOB_SEESAW_PLATFORM,  bob_geo_000458),
+    LOAD_MODEL_FROM_GEO(MODEL_BOB_BARS_GRILLS,      bob_geo_000470),
 LOAD_MODEL_FROM_GEO(22, warp_pipe_geo),
 LOAD_MODEL_FROM_GEO(23, bubbly_tree_geo),
 LOAD_MODEL_FROM_GEO(24, spiky_tree_geo),
@@ -51,9 +45,6 @@ LOAD_MODEL_FROM_GEO(35, castle_door_1_star_geo),
 LOAD_MODEL_FROM_GEO(36, castle_door_3_stars_geo),
 LOAD_MODEL_FROM_GEO(37, key_door_geo),
 LOAD_MODEL_FROM_GEO(38, castle_door_geo),
-LOAD_MODEL_FROM_GEO(54, bob_geo_000440),
-LOAD_MODEL_FROM_GEO(55, bob_geo_000458),
-LOAD_MODEL_FROM_GEO(56, bob_geo_000470),
 // LOAD_MODEL_FROM_GEO(88,0x0500c778),
 // LOAD_MODEL_FROM_DL(132,0x08025f08,4),
 // LOAD_MODEL_FROM_DL(158,0x0302c8a0,4),
@@ -75,7 +66,7 @@ SLEEP_BEFORE_EXIT(/*frames*/ 1),
 EXIT(),
 };
 const LevelScript local_area_wf_1_[] = {
-AREA(1,Geo_wf_1_0x212c180),
+AREA(1,Geo_wf_1_0x2381700),
 TERRAIN(col_wf_1_0xe037a58),
 SET_BACKGROUND_MUSIC(0,19),
 TERRAIN_TYPE(0),

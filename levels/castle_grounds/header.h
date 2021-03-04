@@ -2,7 +2,7 @@
 #define CASTLE_GROUNDS_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_castle_grounds_1_0x1948570[];
+extern const GeoLayout Geo_castle_grounds_1_0x1c81700[];
 extern Gfx DL_castle_grounds_1_0xe0614e0[];
 extern Gfx DL_castle_grounds_1_0xe07a170[];
 extern const Collision col_castle_grounds_1_0xe071d98[];

@@ -2,7 +2,7 @@
 #define HMC_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_hmc_1_0x107d6c0[];
+extern const GeoLayout Geo_hmc_1_0x14a1700[];
 extern Gfx DL_hmc_1_0xe03c0e0[];
 extern Gfx DL_hmc_1_0xe04e710[];
 extern const Collision col_hmc_1_0xe048a28[];

@@ -2,7 +2,7 @@
 #define THI_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_thi_1_0x1663d00[];
+extern const GeoLayout Geo_thi_1_0x19e1700[];
 extern Gfx DL_thi_1_0xe034780[];
 extern const Collision col_thi_1_0xe046888[];
 extern const LevelScript level_thi_custom_entry[];

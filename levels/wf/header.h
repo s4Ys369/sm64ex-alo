@@ -2,7 +2,7 @@
 #define WF_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_wf_1_0x212c180[];
+extern const GeoLayout Geo_wf_1_0x2381700[];
 extern Gfx DL_wf_1_0xe027ed0[];
 extern Gfx DL_wf_1_0xe03cee0[];
 extern const Collision col_wf_1_0xe037a58[];

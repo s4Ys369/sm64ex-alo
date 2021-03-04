@@ -51,7 +51,7 @@ static const LevelScript script_exec_level_table[2
 static const LevelScript script_L1[4];
 static const LevelScript script_L2[4];
 static const LevelScript goto_mario_head_regular[4];
-static const LevelScript goto_mario_head_dizzy[4];
+static const LevelScript goto_mario_head_dizzy[5];
 static const LevelScript script_L5[4];
 
 #define STUB_LEVEL(_0, _1, _2, _3, _4, _5, _6, _7, _8)
@@ -161,9 +161,11 @@ static const LevelScript script_L2[] = {
 static const LevelScript goto_mario_head_regular[] = {
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_mario_head_regular),
 };
-
+//metal cap
 static const LevelScript goto_mario_head_dizzy[] = {
-    EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_mario_head_dizzy),
+    // EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_mario_head_dizzy),
+    EXECUTE(0x19, _cotmc_segment_19SegmentRomStart, _cotmc_segment_19SegmentRomEnd, level_cotmc_custom_entry),
+	EXIT(),
 };
 
 static const LevelScript script_L5[] = {

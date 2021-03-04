@@ -2,7 +2,7 @@
 #define WDW_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_wdw_1_0x1459250[];
+extern const GeoLayout Geo_wdw_1_0x1821700[];
 extern Gfx DL_wdw_1_0xe079560[];
 extern Gfx DL_wdw_1_0xe09f140[];
 extern const Collision col_wdw_1_0xe090ee8[];

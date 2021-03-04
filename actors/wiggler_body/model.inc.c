@@ -2,12 +2,12 @@
 
 // 0x05005A30
 ALIGNED8 static const Texture wiggler_seg5_texture_05005A30[] = {
-#include "actors/wiggler/wiggler_segment_left_side.rgba16.inc.c"
+#include "actors/wiggler/wiggler_head_geo_0x5005a30_custom.rgba16.inc.c"
 };
 
 // 0x05006A30
 ALIGNED8 static const Texture wiggler_seg5_texture_05006A30[] = {
-#include "actors/wiggler/wiggler_segment_right_side.rgba16.inc.c"
+#include "actors/wiggler/wiggler_head_geo_0x5006a30_custom.rgba16.inc.c"
 };
 
 // 0x05007A30

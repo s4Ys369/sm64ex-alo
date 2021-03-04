@@ -2,7 +2,7 @@
 #define BOWSER_2_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_bowser_2_1_0x2978430[];
+extern const GeoLayout Geo_bowser_2_1_0x2a81700[];
 extern Gfx DL_bowser_2_1_0xe00c6b0[];
 extern const Collision col_bowser_2_1_0xe00f718[];
 extern const LevelScript level_bowser_2_custom_entry[];

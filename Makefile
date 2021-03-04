@@ -51,6 +51,18 @@ B_BTN_DRAIN ?= 0
 Z_BTN_DRAIN ?= 0
 #For those hardcore players. Saving is disabled and the game force crashes when you get zero lives.
 HARDCORE ?= 0
+#Max HP is set to 1. For the sake of playability, water HP drain is removed in this mode.
+DAREDEVIL ?= 0
+#A 1 up spawns with you and chases you. Collecing it kills you
+GREEN_DEMON ?= 0
+#SR7 like badges. There is a wallkick badge, triple jump badge and mid air jump badge (I guess as an option to make things more exciting)
+MOVE_BADGES ?= 0
+#ASA Super mode basically. Can do two mid air jumps
+SUPER_MODE ?= 0
+
+#Debug stuff to make testing easier
+#inside pause menu of levels
+LEVEL_SELECT ?= 0
 
 # Build for original N64 (no pc code)
 TARGET_N64 = 1
@@ -77,7 +89,7 @@ NODRAWINGDISTANCE ?= 0
 # Disable QoL fixes by default (helps with them purists)
 QOL_FIXES ?= 1
 # Enable extended options menu by default
-EXT_OPTIONS_MENU ?= 1
+EXT_OPTIONS_MENU ?= 0
 # Disable text-based save-files by default
 TEXTSAVES ?= 0
 # Load resources from external files
@@ -87,13 +99,13 @@ DISCORDRPC ?= 0
 # Enable rumble functions (Originally in Shindou)
 RUMBLE_FEEDBACK ?= 0
 # Enable PC Port defines
-PC_PORT_DEFINES ?= 1
+PC_PORT_DEFINES ?= 0
 
 # Various workarounds for weird toolchains
 NO_BZERO_BCOPY ?= 0
 NO_LDIV ?= 0
 # Check if is compiling on a console
-TARGET_GAME_CONSOLE ?= 1
+TARGET_GAME_CONSOLE ?= 0
 
 # Backend selection
 
@@ -727,6 +739,31 @@ ifeq ($(HARDCORE),1)
   CFLAGS += -DHARDCORE
 endif
 
+ifeq ($(DAREDEVIL),1)
+  CC_CHECK += -DDAREDEVIL
+  CFLAGS += -DDAREDEVIL
+endif
+
+ifeq ($(GREEN_DEMON),1)
+  CC_CHECK += -DGREEN_DEMON
+  CFLAGS += -DGREEN_DEMON
+endif
+
+ifeq ($(MOVE_BADGES),1)
+  CC_CHECK += -DMOVE_BADGES
+  CFLAGS += -DMOVE_BADGES
+endif
+
+ifeq ($(SUPER_MODE),1)
+  CC_CHECK += -DSUPER_MODE
+  CFLAGS += -DSUPER_MODE
+endif
+
+ifeq ($(LEVEL_SELECT),1)
+  CC_CHECK += -DLEVEL_SELECT
+  CFLAGS += -DLEVEL_SELECT
+endif
+
 # Check for extended options menu option
 ifeq ($(EXT_OPTIONS_MENU),1)
   CC_CHECK += -DEXT_OPTIONS_MENU -DCHEATS_ACTIONS
@@ -999,6 +1036,31 @@ endif
 ifeq ($(HARDCORE),1)
   CC_CHECK += -DHARDCORE
   CFLAGS += -DHARDCORE
+endif
+
+ifeq ($(DAREDEVIL),1)
+  CC_CHECK += -DDAREDEVIL
+  CFLAGS += -DDAREDEVIL
+endif
+
+ifeq ($(GREEN_DEMON),1)
+  CC_CHECK += -DGREEN_DEMON
+  CFLAGS += -DGREEN_DEMON
+endif
+
+ifeq ($(MOVE_BADGES),1)
+  CC_CHECK += -DMOVE_BADGES
+  CFLAGS += -DMOVE_BADGES
+endif
+
+ifeq ($(SUPER_MODE),1)
+  CC_CHECK += -DSUPER_MODE
+  CFLAGS += -DSUPER_MODE
+endif
+
+ifeq ($(LEVEL_SELECT),1)
+  CC_CHECK += -DLEVEL_SELECT
+  CFLAGS += -DLEVEL_SELECT
 endif
 
 ifeq ($(TEXTSAVES),1)

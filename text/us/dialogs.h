@@ -1585,7 +1585,7 @@ was missing these views."))
 
 DEFINE_DIALOG(DIALOG_166,1,4,30,200, _("I'm so glad that big\n\
 brute is gone, I was\n\
-beginning to think I'd\n\
+biginning to think I'd\n\
 never see the sunlight\n\
 again!"))
 

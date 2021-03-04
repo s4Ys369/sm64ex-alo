@@ -13,14 +13,13 @@
 
 #include "areas/1/custom.model.inc.h"
 #include "levels/pss/header.h"
-#include "levels/bob/header.h"
 extern u8 _pss_segment_ESegmentRomStart[]; 
 extern u8 _pss_segment_ESegmentRomEnd[];
-#include "levels/bbh/header.h"
+#include "levels/bob/header.h"
 const LevelScript level_pss_custom_entry[] = {
 INIT_LEVEL(),
-LOAD_MIO0(0x07, _bbh_segment_7SegmentRomStart, _bbh_segment_7SegmentRomEnd),
-LOAD_RAW(0x1A, _bbhSegmentRomStart, _bbhSegmentRomEnd),
+LOAD_MIO0(0x07, _bob_segment_7SegmentRomStart, _bob_segment_7SegmentRomEnd),
+LOAD_RAW(0x1A, _bobSegmentRomStart, _bobSegmentRomEnd),
 LOAD_RAW(0x0E, _pss_segment_ESegmentRomStart, _pss_segment_ESegmentRomEnd),
 LOAD_MIO0(0xA,_water_skybox_mio0SegmentRomStart,_water_skybox_mio0SegmentRomEnd),
 LOAD_MIO0(8,_common0_mio0SegmentRomStart,_common0_mio0SegmentRomEnd),
@@ -31,15 +30,10 @@ LOAD_MIO0(6,_group14_mio0SegmentRomStart,_group14_mio0SegmentRomEnd),
 LOAD_RAW(13,_group14_geoSegmentRomStart,_group14_geoSegmentRomEnd),
 ALLOC_LEVEL_POOL(),
 MARIO(/*model*/ MODEL_MARIO, /*behParam*/ 0x00000001, /*beh*/ bhvMario),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_HAUNTED_DOOR,           haunted_door_geo),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_STAIRCASE_STEP,         geo_bbh_0005B0),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_TILTING_FLOOR_PLATFORM, geo_bbh_0005C8),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM,      geo_bbh_0005E0),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM_PART, geo_bbh_0005F8),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_MOVING_BOOKSHELF,       geo_bbh_000610),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_MESH_ELEVATOR,          geo_bbh_000628),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_MERRY_GO_ROUND,         geo_bbh_000640),
-LOAD_MODEL_FROM_GEO(MODEL_BBH_WOODEN_TOMB,            geo_bbh_000658),
+LOAD_MODEL_FROM_GEO(MODEL_BOB_BUBBLY_TREE,      bubbly_tree_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_BOB_CHAIN_CHOMP_GATE, bob_geo_000440),
+    LOAD_MODEL_FROM_GEO(MODEL_BOB_SEESAW_PLATFORM,  bob_geo_000458),
+    LOAD_MODEL_FROM_GEO(MODEL_BOB_BARS_GRILLS,      bob_geo_000470),
 LOAD_MODEL_FROM_GEO(22, warp_pipe_geo),
 LOAD_MODEL_FROM_GEO(23, bubbly_tree_geo),
 LOAD_MODEL_FROM_GEO(24, spiky_tree_geo),
@@ -51,9 +45,6 @@ LOAD_MODEL_FROM_GEO(35, castle_door_1_star_geo),
 LOAD_MODEL_FROM_GEO(36, castle_door_3_stars_geo),
 LOAD_MODEL_FROM_GEO(37, key_door_geo),
 LOAD_MODEL_FROM_GEO(38, castle_door_geo),
-LOAD_MODEL_FROM_GEO(54, bob_geo_000440),
-LOAD_MODEL_FROM_GEO(55, bob_geo_000458),
-LOAD_MODEL_FROM_GEO(56, bob_geo_000470),
 // LOAD_MODEL_FROM_DL(84,0x05000840,4),
 // LOAD_MODEL_FROM_DL(132,0x08025f08,4),
 // LOAD_MODEL_FROM_DL(158,0x0302c8a0,4),
@@ -75,7 +66,7 @@ SLEEP_BEFORE_EXIT(/*frames*/ 1),
 EXIT(),
 };
 const LevelScript local_area_pss_1_[] = {
-AREA(1,Geo_pss_1_0x24006b0),
+AREA(1,Geo_pss_1_0x2621700),
 TERRAIN(col_pss_1_0xe026508),
 SET_BACKGROUND_MUSIC(0,40),
 TERRAIN_TYPE(0),
@@ -88,7 +79,7 @@ const LevelScript local_objects_pss_1_[] = {
 OBJECT_WITH_ACTS(0,4943,549,-5826,0,0,0,0xa0000, bhvAirborneWarp,31),
 OBJECT_WITH_ACTS(0,-5448,-220,-1471,0,180,0,0xb0000, bhvFadingWarp,31),
 OBJECT_WITH_ACTS(0,5962,127,-1749,0,0,0,0xc0000, bhvFadingWarp,31),
-OBJECT_WITH_ACTS(104,-1407,-60,-5423,0,310,0,0x30000, bhvTreasureChestsShip,31),
+OBJECT_WITH_ACTS(104,-1407,-60,-5423,0,310,0,0x30000, bhvKoopa,31),
 OBJECT_WITH_ACTS(0,-3415,4573,2678,0,0,0,0x0, bhvKoopaRaceEndpoint,31),
 OBJECT_WITH_ACTS(55,-4025,845,5880,0,90,0,0x30000, bhvSeesawPlatform,31),
 OBJECT_WITH_ACTS(215,3285,-102,2310,0,0,0,0x0, bhvRedCoin,31),

@@ -2,7 +2,7 @@
 #define WMOTR_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_wmotr_1_0x286f680[];
+extern const GeoLayout Geo_wmotr_1_0x29a1700[];
 extern Gfx DL_wmotr_1_0xe0281a0[];
 extern Gfx DL_wmotr_1_0xe0358a0[];
 extern const Collision col_wmotr_1_0xe031238[];

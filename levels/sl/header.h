@@ -2,7 +2,7 @@
 #define SL_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_sl_1_0x1352e30[];
+extern const GeoLayout Geo_sl_1_0x1741700[];
 extern Gfx DL_sl_1_0xe0223f0[];
 extern Gfx DL_sl_1_0xe0330f0[];
 extern const Collision col_sl_1_0xe02ec20[];

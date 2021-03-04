@@ -2,7 +2,7 @@
 #define TTM_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_ttm_1_0x2a7b7a0[];
+extern const GeoLayout Geo_ttm_1_0x2c41700[];
 extern Gfx DL_ttm_1_0xe036d50[];
 extern Gfx DL_ttm_1_0xe0472b0[];
 extern const Collision col_ttm_1_0xe041418[];

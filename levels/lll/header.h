@@ -2,7 +2,7 @@
 #define LLL_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_lll_1_0x1f390f0[];
+extern const GeoLayout Geo_lll_1_0x21c1700[];
 extern Gfx DL_lll_1_0xe02a8c0[];
 extern Gfx DL_lll_1_0xe03dd90[];
 extern const Collision col_lll_1_0xe037668[];

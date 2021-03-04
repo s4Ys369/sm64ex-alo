@@ -2,7 +2,7 @@
 #define CASTLE_INSIDE_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_castle_inside_1_0xf9b510[];
+extern const GeoLayout Geo_castle_inside_1_0x13c1700[];
 extern Gfx DL_castle_inside_1_0xe053460[];
 extern Gfx DL_castle_inside_1_0xe0698a0[];
 extern const Collision col_castle_inside_1_0xe061190[];

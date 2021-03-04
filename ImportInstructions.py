@@ -19,32 +19,29 @@ It is expected to have many warnings for editor files and for roms with lots of 
 ******************************************************************************************
 
 Objects without references must have behaviors created for them, be given an existing behavior, or be commented out.
-#I've added all of these to custom.behavior_data.inc.h but there are more objects with custom behaviors
-#that overwrite known labels. Almost all of them are just moving solid platforms, are just require new behaviors though.
- Level castle_inside Area 1 has object  Bhv_Custom_0x00402400 with no known label.
- Level bbh Area 1 has object  Bhv_Custom_0x19001200 with no known label.
+#done
  Level bbh Area 1 has object  Bhv_Custom_0x1300012c with no known label.
  Level bbh Area 1 has object  Bhv_Custom_0x13000684 with no known label.
  Level ssl Area 1 has object  Bhv_Custom_0x1300496c with no known label.
  Level wdw Area 1 has object  Bhv_Custom_0x13004cc8 with no known label.
  Level thi Area 1 has object  Bhv_Custom_0x13001e68 with no known label.
  Level thi Area 1 has object  Bhv_Custom_0x13000fc0 with no known label.
- Level castle_grounds Area 1 has object  Bhv_Custom_0x00402400 with no known label.
  Level ddd Area 1 has object  Bhv_Custom_0x13004854 with no known label.
- Level castle_courtyard Area 1 has object  Bhv_Custom_0x00402400 with no known label.
  Level totwc Area 1 has object  Bhv_Custom_0x13005664 with no known label.
 ******************************************************************************************
 
 Levels with fog in sm64 editor and likely early versions of Rom Manager are completely broken and destroy the levels graphics and most non opaque objects.
 I attempt to auto fix these, if there is any issue in these levels check fog first.
-#combiners replaced with proper ones for all levels, may cause issues in these levels. Geo layers in these levels
-#also changed.
+#geos changed
  Level bbh Display List DL_bbh_1_0xe02c140 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
+ Level hmc Display List DL_hmc_1_0xe03c0e0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
+ Level bob Display List DL_bob_1_0xe029db0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level sl Display List DL_sl_1_0xe0223f0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level thi Display List DL_thi_1_0xe034780 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level bitdw Display List DL_bitdw_1_0xe018ae0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level vcutm Display List DL_vcutm_1_0xe01bf70 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level bitfs Display List DL_bitfs_1_0xe03a9d0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
+ Level wf Display List DL_wf_1_0xe027ed0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level ending Display List DL_ending_1_0xe063110 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level pss Display List DL_pss_1_0xe01d1f0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
  Level cotmc Display List DL_cotmc_1_0xe04b2b0 has fog, for editor, fog DLs are heavily edited, potential for gfx errors.
@@ -55,8 +52,7 @@ New models are detected by comparing the checksums of textures from the specific
 The comparison models come from an unedited vanilla rom loaded into Rom Manager.
 If a model is in this list, it has either an unrecognized ID or a new texture.
 If a model is not in this list, it does not guarantee that it is unedited.
-
- model bubble_geo_ in folder bubble has a new model or new textures.
+#only did square platform
  bitdw
 	 model geo_bitdw_0003C0_ in folder bitdw/areas/1/starting_platform has a new model or new textures.
 	 model geo_bitdw_0003D8_ in folder bitdw/areas/1/large_platform has a new model or new textures.
@@ -73,10 +69,7 @@ If a model is not in this list, it does not guarantee that it is unedited.
 	 model geo_bitdw_000540_ in folder bitdw/seesaw_platform has a new model or new textures.
 	 model geo_bitdw_000528_ in folder bitdw/sliding_platform has a new model or new textures.
 	 model geo_bitdw_000600_ in folder bitdw/collapsing_stairs_5 has a new model or new textures.
- model bubbly_tree_geo_ in folder tree has a new model or new textures.
- model metal_door_geo_ in folder door has a new model or new textures.
- model marios_winged_metal_cap_geo_ in folder mario_cap has a new model or new textures.
- model red_flame_geo_ in folder flame has a new model or new textures.
+
  model unk_DL_16001000_ in folder unk_bbh_16001000 has a new model or new textures.
  model unk_DL_1700009c_ in folder unk_ccm_1700009c has a new model or new textures.
  model unk_DL_1700009c_ in folder unk_hmc_1700009c has a new model or new textures.
@@ -86,13 +79,7 @@ If a model is not in this list, it does not guarantee that it is unedited.
  model unk_DL_16001048_ in folder unk_lll_16001048 has a new model or new textures.
  model unk_DL_0500c778_ in folder unk_wf_0500c778 has a new model or new textures.
  model unk_DL_0500c778_ in folder unk_castle_courtyard_0500c778 has a new model or new textures.
- model breakable_box_geo_ in folder breakable_box has a new model or new textures.
- model breakable_box_small_geo_ in folder breakable_box_small has a new model or new textures.
- model exclamation_box_outline_geo_ in folder exclamation_box_outline has a new model or new textures.
- model exclamation_box_geo_ in folder exclamation_box has a new model or new textures.
- model black_bobomb_geo_ in folder bobomb has a new model or new textures.
- model cannon_lid_seg8_dl_080048E0_ in folder cannon_lid has a new model or new textures.
- model metal_box_geo_ in folder metal_box has a new model or new textures.
+#done
  rr
 	 model rr_geo_000678_ in folder rr/areas/1/3 has a new model or new textures.
 	 model rr_geo_000690_ in folder rr/areas/1/4 has a new model or new textures.
@@ -115,12 +102,11 @@ If a model is not in this list, it does not guarantee that it is unedited.
 	 model rr_geo_000860_ in folder rr/swinging_platform has a new model or new textures.
 	 model rr_geo_000920_ in folder rr/donut_block has a new model or new textures.
 	 model rr_geo_0008F0_ in folder rr/elevator_platform has a new model or new textures.
-	 model rr_geo_000958_ in folder rr/tricky_triangles1 has a new model or new textures.
+	 model rr_geo_000958_ in folder rr/tricky_triangles_1 has a new model or new textures.
 	 model rr_geo_000970_ in folder rr/tricky_triangles_2 has a new model or new textures.
 	 model rr_geo_0009A0_ in folder rr/tricky_triangles_4 has a new model or new textures.
 	 model rr_geo_000660_ in folder rr/areas/1/2 has a new model or new textures.
- model mr_i_iris_geo_ in folder mr_i_iris has a new model or new textures.
- model dorrie_geo_ in folder dorrie has a new model or new textures.
+#done
  wf
 	 model wf_geo_0007E0_ in folder wf/areas/1/5 has a new model or new textures.
 	 model wf_geo_000878_ in folder wf/areas/1/8 has a new model or new textures.
@@ -133,10 +119,12 @@ If a model is not in this list, it does not guarantee that it is unedited.
 	 model wf_geo_000BA8_ in folder wf/kickable_board has a new model or new textures.
 	 model wf_geo_000BE0_ in folder wf/tower_door has a new model or new textures.
 	 model wf_geo_000A58_ in folder wf/rotating_wooden_platform has a new model or new textures.
-jrb
+#done
+ jrb
 	 model jrb_geo_000930_ in folder jrb/rock has a new model or new textures.
 	 model jrb_geo_000900_ in folder jrb/falling_pillar has a new model or new textures.
 	 model jrb_geo_000918_ in folder jrb/falling_pillar_base has a new model or new textures.
+#skipped
  ttm
 	 model ttm_geo_000778_ in folder ttm/areas/1/4 has a new model or new textures.
 	 model ttm_geo_0007A8_ in folder ttm/areas/1/5 has a new model or new textures.
@@ -153,14 +141,14 @@ jrb
 	 model ttm_geo_000730_ in folder ttm/rolling_log has a new model or new textures.
 	 model ttm_geo_000DBC_ in folder ttm/moon_smiley has a new model or new textures.
 	 model ttm_geo_000DF4_ in folder ttm/slide_exit_podium has a new model or new textures.
- model wiggler_head_geo_ in folder wiggler_head has a new model or new textures.
+#done
  hmc
 	 model hmc_geo_0005A0_ in folder hmc/arrow_platform has a new model or new textures.
 	 model hmc_geo_000548_ in folder hmc/rolling_rock has a new model or new textures.
 	 model hmc_geo_000570_ in folder hmc/rolling_rock_fragment_1 has a new model or new textures.
 	 model hmc_geo_000588_ in folder hmc/rolling_rock_fragment_2 has a new model or new textures.
 	 model hmc_geo_000530_ in folder hmc/areas/1/grill_door has a new model or new textures.
- model yoshi_egg_geo_ in folder yoshi_egg has a new model or new textures.
+#done
  bbh
 	 model geo_bbh_0005B0_ in folder bbh/staircase_step has a new model or new textures.
 	 model geo_bbh_0005C8_ in folder bbh/tilting_trap_platform has a new model or new textures.
@@ -168,12 +156,12 @@ jrb
 	 model geo_bbh_000610_ in folder bbh/moving_bookshelf has a new model or new textures.
 	 model geo_bbh_000628_ in folder bbh/mesh_elevator has a new model or new textures.
 	 model geo_bbh_000640_ in folder bbh/merry_go_round has a new model or new textures.
+#done
  ssl
 	 model ssl_geo_000734_ in folder ssl/grindel has a new model or new textures.
 	 model ssl_geo_000764_ in folder ssl/spindel has a new model or new textures.
 	 model ssl_geo_000630_ in folder ssl_tox_box has a new model or new textures.
- model pokey_head_geo_ in folder pokey has a new model or new textures.
- model eyerok_left_hand_geo_ in folder eyerok has a new model or new textures.
+#done
  lll
 	 model lll_geo_000A78_ in folder lll/areas/1/10 has a new model or new textures.
 	 model lll_geo_000A90_ in folder lll/areas/1/11 has a new model or new textures.
@@ -182,25 +170,48 @@ jrb
 	 model lll_geo_000BC8_ in folder lll/sinking_rectangular_platform has a new model or new textures.
 	 model lll_geo_000BE0_ in folder lll/sinking_square_platform has a new model or new textures.
 	 model lll_geo_000BF8_ in folder lll/tilting_square_platform has a new model or new textures.
+#done
  ddd
 	 model ddd_geo_000478_ in folder ddd/sub_door has a new model or new textures.
 	 model ddd_geo_0004A0_ in folder ddd/submarine has a new model or new textures.
- model bowser_geo_ in folder bowser has a new model or new textures.
- bowser 3
+#only falling plat 2
+ bowser3
 	 model bowser_3_geo_000380_ in folder bowser_3/areas/1/bomb_stand has a new model or new textures.
 	 model bowser_3_geo_0002A8_ in folder bowser_3/falling_platform_2 has a new model or new textures.
 	 model bowser_3_geo_000308_ in folder bowser_3/falling_platform_6 has a new model or new textures.
 	 model bowser_3_geo_000320_ in folder bowser_3/falling_platform_7 has a new model or new textures.
 	 model bowser_3_geo_000338_ in folder bowser_3/falling_platform_8 has a new model or new textures.
 	 model bowser_3_geo_000350_ in folder bowser_3/falling_platform_9 has a new model or new textures.
-*****************************************************************************
+******************************************************************************************
+
 Collision models are loaded via behavior, not alongside the model. This means it can be more difficult to detect where exactly the collision belongs.
 I attempt to guess based on what model the collision is first used with, but if I'm not sure, it will be logged here.
 
- Collision geo_bbh_0005C8 in folder bbh/tilting_trap_platform is unkown. Used with Behavior Bhv_Custom_0x13001e68.
- Collision geo_bbh_000640 in folder bbh/merry_go_round is unkown. Used with Behavior Bhv_Custom_0x13000fc0.
- Collision ddd_geo_000478 in folder ddd/sub_door is unkown. Used with Behavior Bhv_Custom_0x13004854.
- Collision dorrie_geo in folder dorrie is unkown. Used with Behavior Bhv_Custom_0x13005664.
+#done
+ Collision jrb_geo_000948_ in folder jrb/floating_platform is unkown or found to be new. Used with Behavior bhvJrbFloatingPlatform.
+ Collision jrb_geo_000930_ in folder jrb/rock is unkown or found to be new. Used with Behavior bhvShipPart3.
+#done
+ Collision geo_bbh_0005C8_ in folder bbh/tilting_trap_platform is unkown or found to be new. Used with Behavior Bhv_Custom_0x13001e68.
+ Collision geo_bbh_000640_ in folder bbh/merry_go_round is unkown or found to be new. Used with Behavior Bhv_Custom_0x13000fc0.
+#done
+ Collision hmc_geo_0005A0_ in folder hmc/arrow_platform is unkown or found to be new. Used with Behavior bhvControllablePlatform.
+#done
+ Collision ssl_geo_000794_ in folder ssl/moving_pyramid_wall is unkown or found to be new. Used with Behavior bhvSslMovingPyramidWall.
+ Collision ssl_geo_000764_ in folder ssl/spindel is unkown or found to be new. Used with Behavior bhvTowerDoor.
+ Collision ssl_geo_000734_ in folder ssl/grindel is unkown or found to be new. Used with Behavior bhvMacroUkiki.
+#done
+ Collision geo_bitdw_000558_ in folder bitdw/square_platform is unkown or found to be new. Used with Behavior bhvSquarishPathMoving.
+#skip
+ Collision Unk_Collision_117559464 in folder Unk_Collision_117559464 is unkown or found to be new. Used with Behavior bhvLllRotatingBlockWithFireBars.
+#done
+ Collision castle_grounds_geo_000724_ in folder castle_grounds/areas/1/8 is unkown or found to be new. Used with Behavior bhvHiddenAt120Stars.
+#done
+ Collision Unk_Collision_117481432 in folder Unk_Collision_117481432 is unkown or found to be new. Used with Behavior bhvWfSlidingPlatform.
+#done
+ Collision dorrie_geo_ in folder dorrie is unkown or found to be new. Used with Behavior Bhv_Custom_0x13005664.
+#done
+ Collision rr_geo_000860_ in folder rr/swinging_platform is unkown or found to be new. Used with Behavior bhvTTCElevator.
+ Collision rr_geo_000860_ in folder rr/swinging_platform is unkown or found to be new. Used with Behavior bhvSwingPlatform.
 
 Known methods of crashing:
 *****************************************************************************
@@ -209,7 +220,7 @@ IF CRASH ON BOOT - CHECK SEQUENCES
 IF TITLE SCREEN LOOP - CHECK START LEVEL IN TWEAKS.INC.C
 IF TEXTURES ARE MESSED UP - ALWAYS CHECK LEVEL FOG FIRST
 IF ONLY ALPHA TEXTURES MESSED UP - MOVE FOG GEO LAYOUT TO LAYER 1/4 FROM 4/6
-IF CRASH UPON ENTERING A LEVEL, CHECK OBJECTS. IF EDITOR, CHECK SCROLLS FIRST. IF NO OBJECTS BAD CHECK SEQUENCES
+IF CRASH UPON ENTERING A LEVEL, CHECK OBJECTS. IF EDITOR, CHECK SCROLLS FIRST. IF NO OBJECTS BAD CHECK SKYBOXES, THEN SEQUENCES
 *****************************************************************************
 N64 BUILD
 IF SURFACE NODE POOOL OR SURFACE POOL FULL - ADD MORE TRIS TO EXT BOUNDS.H

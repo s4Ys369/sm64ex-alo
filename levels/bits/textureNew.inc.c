@@ -1,6 +1,3 @@
-ALIGNED8 u8 bits_1__texture_09001800[] = {
-#include "levels/bits/bits_1_0x9001800_custom.rgba16.inc.c"
-};
 ALIGNED8 u8 bits_1__texture_0E000010[] = {
 #include "levels/bits/bits_1_0xe000010_custom.rgba16.inc.c"
 };
@@ -28,14 +25,17 @@ ALIGNED8 u8 bits_1__texture_0E004810[] = {
 ALIGNED8 u8 bits_1__texture_0E005010[] = {
 #include "levels/bits/bits_1_0xe005010_custom.rgba16.inc.c"
 };
+ALIGNED8 u8 bits_1__texture_09001800[] = {
+#include "levels/bits/bits_1_0x9001800_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bits_1__texture_0E006810[] = {
+#include "levels/bits/bits_1_0xe006810_custom.rgba16.inc.c"
+};
 ALIGNED8 u8 bits_1__texture_0E005810[] = {
 #include "levels/bits/bits_1_0xe005810_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 bits_1__texture_0E006010[] = {
 #include "levels/bits/bits_1_0xe006010_custom.rgba16.inc.c"
-};
-ALIGNED8 u8 bits_1__texture_0E006810[] = {
-#include "levels/bits/bits_1_0xe006810_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 bits_1__texture_0E007010[] = {
 #include "levels/bits/bits_1_0xe007010_custom.rgba16.inc.c"
@@ -55,11 +55,11 @@ ALIGNED8 u8 bits_1__texture_0E00A810[] = {
 ALIGNED8 u8 bits_1__texture_0E00B810[] = {
 #include "levels/bits/bits_1_0xe00b810_custom.rgba16.inc.c"
 };
-ALIGNED8 u8 bits_1__texture_0E00C010[] = {
-#include "levels/bits/bits_1_0xe00c010_custom.rgba16.inc.c"
-};
 ALIGNED8 u8 bits_1__texture_0E00C810[] = {
 #include "levels/bits/bits_1_0xe00c810_custom.rgba16.inc.c"
+};
+ALIGNED8 u8 bits_1__texture_0E00C010[] = {
+#include "levels/bits/bits_1_0xe00c010_custom.rgba16.inc.c"
 };
 ALIGNED8 u8 bits_1__texture_0E009810[] = {
 #include "levels/bits/bits_1_0xe009810_custom.rgba16.inc.c"

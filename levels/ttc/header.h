@@ -2,7 +2,7 @@
 #define TTC_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_ttc_1_0x1784210[];
+extern const GeoLayout Geo_ttc_1_0x1ac1700[];
 extern Gfx DL_ttc_1_0xe030f20[];
 extern Gfx DL_ttc_1_0xe0436b0[];
 extern const Collision col_ttc_1_0xe03dd58[];

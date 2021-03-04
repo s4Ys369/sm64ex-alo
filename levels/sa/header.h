@@ -2,7 +2,7 @@
 #define SA_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_sa_1_0x1d554e0[];
+extern const GeoLayout Geo_sa_1_0x2001700[];
 extern Gfx DL_sa_1_0xe023660[];
 extern Gfx DL_sa_1_0xe02edd0[];
 extern const Collision col_sa_1_0xe02b100[];

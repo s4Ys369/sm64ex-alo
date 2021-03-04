@@ -14,7 +14,8 @@
 #include "levels/bowser_3/header.h"
 
 #include "levels/bowser_3/falling_platform_1/geo.inc.c"
-#include "levels/bowser_3/falling_platform_2/geo.inc.c"
+#include "levels/bowser_3/falling_platform_2/custom.model.inc.h"
+#include "levels/bowser_3/falling_platform_2/custom.geo.inc.c"
 #include "levels/bowser_3/falling_platform_3/geo.inc.c"
 #include "levels/bowser_3/falling_platform_4/geo.inc.c"
 #include "levels/bowser_3/falling_platform_5/geo.inc.c"

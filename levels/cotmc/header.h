@@ -2,7 +2,7 @@
 #define COTMC_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_cotmc_1_0x24fc350[];
+extern const GeoLayout Geo_cotmc_1_0x2701700[];
 extern Gfx DL_cotmc_1_0xe04b2b0[];
 extern Gfx DL_cotmc_1_0xe06bbf0[];
 extern const Collision col_cotmc_1_0xe061700[];

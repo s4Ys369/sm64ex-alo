@@ -2,7 +2,7 @@
 #define VCUTM_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_vcutm_1_0x1b78e10[];
+extern const GeoLayout Geo_vcutm_1_0x1e41700[];
 extern Gfx DL_vcutm_1_0xe01bf70[];
 extern Gfx DL_vcutm_1_0xe027840[];
 extern const Collision col_vcutm_1_0xe024188[];

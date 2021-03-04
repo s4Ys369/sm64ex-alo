@@ -2,7 +2,7 @@
 #define BITDW_HEADER_H
 #include "types.h"
 #include "game/moving_texture.h"
-extern const GeoLayout Geo_bitdw_1_0x1a96c60[];
+extern const GeoLayout Geo_bitdw_1_0x1d61700[];
 extern Gfx DL_bitdw_1_0xe018ae0[];
 extern Gfx DL_bitdw_1_0xe0251c0[];
 extern const Collision col_bitdw_1_0xe022250[];
