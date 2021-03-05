@@ -1549,6 +1549,7 @@ u32 interact_pole(struct MarioState *m, UNUSED u32 interactType, struct Object *
 #else
             marioObj->oMarioPoleYawVel = (s32)(m->forwardVel * 0x100 + 0x1000);
             reset_mario_pitch(m);
+#endif
 #ifdef RUMBLE_FEEDBACK
             queue_rumble_data(5, 80);
 #endif

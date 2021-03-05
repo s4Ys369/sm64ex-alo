@@ -2180,6 +2180,7 @@ s32 act_special_triple_jump(struct MarioState *m) {
             } else {
                 set_mario_action(m, ACT_FREEFALL_LAND_STOP, 0);
             }
+            #endif
             play_mario_landing_sound(m, SOUND_ACTION_TERRAIN_LANDING);
             break;
         
@@ -2221,6 +2222,7 @@ s32 act_special_triple_jump(struct MarioState *m) {
         case AIR_STEP_HIT_WALL:
             mario_bonk_reflection(m, TRUE);
             break;
+        #endif
     }
 
     if (m->actionState == 0 || m->vel[1] > 0.0f) {
