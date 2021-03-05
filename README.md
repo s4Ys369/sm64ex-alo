@@ -1,7 +1,7 @@
 # STAR ROAD PORT (WIP)
 Fork of 
-[sm64ex-alo](https://github.com/AloXado320/sm64ex-alo)
-[Star Road RM2C](https://github.com/jesusyoshi54/sm64ex-alo/tree/star_road)
+ * [sm64ex-alo](https://github.com/AloXado320/sm64ex-alo)
+ * [Star Road RM2C](https://github.com/jesusyoshi54/sm64ex-alo/tree/star_road)
 
 Aiming to merge the functionality of both repos into one
 
@@ -16,7 +16,6 @@ Aiming to merge the functionality of both repos into one
  * CHEAT_ACTIONS
  * DISCORDRPC
  * QOL FIXES
- * TEXT_SAVES
  * TARGETS
 
 #### Building
