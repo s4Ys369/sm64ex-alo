@@ -34,10 +34,10 @@
 #include "sound_init.h"
 #include "pc/configfile.h"
 #ifdef CHEATS_ACTIONS
-#include "cheats.h"
+#include "extras/cheats.h"
 #endif
 #ifdef BETTERCAMERA
-#include "bettercamera.h"
+#include "extras/bettercamera.h"
 #endif
 
 u32 unused80339F10;
@@ -393,6 +393,12 @@ void mario_set_forward_vel(struct MarioState *m, f32 forwardVel) {
  */
 s32 mario_get_floor_class(struct MarioState *m) {
     s32 floorClass;
+#ifdef CHEATS_ACTIONS
+    if (Cheats.EnableCheats && Cheats.WalkOn.Slope) {
+        floorClass = SURFACE_CLASS_NOT_SLIPPERY; 
+        return floorClass;
+    }
+#endif
 
     // The slide terrain type defaults to slide slipperiness.
     // This doesn't matter too much since normally the slide terrain
@@ -1230,31 +1236,17 @@ void squish_mario_model(struct MarioState *m) {
         // Also handles the Tiny Mario and Huge Mario cheats.
         if (m->squishTimer == 0) {
 #ifdef CHEATS_ACTIONS
-            if (Cheats.EnableCheats) {
-                if (Cheats.HugeMario) {
-                    vec3f_set(m->marioObj->header.gfx.scale, 2.5f, 2.5f, 2.5f);
-                }
-                else if (Cheats.TinyMario) {
-                    vec3f_set(m->marioObj->header.gfx.scale, 0.2f, 0.2f, 0.2f);
-                }
-                else {
-                    vec3f_set(m->marioObj->header.gfx.scale, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else {
+            cheats_mario_size(m);
 #endif
-                #ifdef CHAOS_LITE
-				if (m->Chaos_Vals[0]<5 | m->Chaos_Vals[1]<5){
-					
-				}else{
-					vec3f_set(m->marioObj->header.gfx.scale, 1.0f, 1.0f, 1.0f);
-				}
-				#else
-				vec3f_set(m->marioObj->header.gfx.scale, 1.0f, 1.0f, 1.0f);
-				#endif
-#ifdef CHEATS_ACTIONS
+#ifdef CHAOS_LITE
+            if (m->Chaos_Vals[0] < 5 | m->Chaos_Vals[1] < 5) {
+
+            } else {
+                vec3f_set(m->marioObj->header.gfx.scale, 1.0f, 1.0f, 1.0f);
             }
-#endif      
+#else
+            vec3f_set(m->marioObj->header.gfx.scale, 1.0f, 1.0f, 1.0f);
+#endif
         }
         // If timer is less than 16, rubber-band Mario's size scale up and down.
         else if (m->squishTimer <= 16) {
@@ -1438,12 +1430,7 @@ void update_mario_inputs(struct MarioState *m) {
     debug_print_speed_action_normal(m);
     
 #ifdef CHEATS_ACTIONS
-    /* Moonjump cheat */
-    while (Cheats.MoonJump == true && Cheats.EnableCheats == true && m->controller->buttonDown & L_TRIG ){
-        m->vel[1] = 25;
-        break;   // TODO: Unneeded break?
-    }
-    /*End of moonjump cheat */
+    cheats_mario_inputs(m);
 #endif
 
     if (gCameraMovementFlags & CAM_MOVE_C_UP_MODE) {
@@ -1584,7 +1571,12 @@ void update_mario_health(struct MarioState *m) {
 		#ifdef DAREDEVIL
 		#else
         // Play a noise to alert the player when Mario is close to drowning.
-        if (((m->action & ACT_GROUP_MASK) == ACT_GROUP_SUBMERGED) && (m->health < 0x300)) {
+
+        if (((m->action & ACT_GROUP_MASK) == ACT_GROUP_SUBMERGED) && (m->health < 0x300)
+#ifdef QOL_FIX_DROWING_SOUND_METAL
+        && !((m->flags & (MARIO_METAL_CAP)) > 0)
+#endif
+        ) {
             play_sound(SOUND_MOVING_ALMOST_DROWNING, gGlobalSoundSource);
 #ifdef RUMBLE_FEEDBACK
             if (!gRumblePakTimer) {
@@ -1887,26 +1879,11 @@ void Apply_Chaos_Mods(struct MarioState *m){
  */
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
-    /**
-    * Cheat stuff
-    */
 
 #ifdef CHEATS_ACTIONS
-    if (Cheats.EnableCheats)
-    {
-        if (Cheats.GodMode)
-            gMarioState->health = 0x880;
+    cheats_mario_action(gMarioState);
+#endif
 
-        if (Cheats.InfiniteLives && gMarioState->numLives < 99)
-            gMarioState->numLives += 1;
-
-        if (Cheats.SuperSpeed && gMarioState->forwardVel > 0)
-            gMarioState->forwardVel += 100;
-    }
-    /**
-    * End of cheat stuff
-    */
-#endif    
     if (gMarioState->action) {
         gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
         mario_reset_bodystate(gMarioState);
@@ -2073,7 +2050,11 @@ void init_mario(void) {
     vec3f_copy(gMarioState->marioObj->header.gfx.pos, gMarioState->pos);
     vec3s_set(gMarioState->marioObj->header.gfx.angle, 0, gMarioState->faceAngle[1], 0);
 
-    if (save_file_get_cap_pos(capPos)) {
+    if (save_file_get_cap_pos(capPos)
+#if QOL_FIX_HAT_CLONE_FADE
+    && (count_objects_with_behavior(bhvNormalCap) > 1)
+#endif
+    ) {
         capObject = spawn_object(gMarioState->marioObj, MODEL_MARIOS_CAP, bhvNormalCap);
 
         capObject->oPosX = capPos[0];

@@ -15,7 +15,10 @@
 #include "rumble_init.h"
 #include "save_file.h"
 #ifdef BETTERCAMERA
-#include "bettercamera.h"
+#include "extras/bettercamera.h"
+#endif
+#ifdef CHEATS_ACTIONS
+#include "extras/cheats.h"
 #endif
 #ifdef SUPER_MODE
 u8 Super_Jump_Count=0;
@@ -78,6 +81,7 @@ s32 check_fall_damage(struct MarioState *m, u32 hardFallAction) {
     f32 damageHeight;
 
     fallHeight = m->peakHeight - m->pos[1];
+
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wtype-limits"
@@ -1390,7 +1394,7 @@ s32 act_air_hit_wall(struct MarioState *m) {
         return set_mario_action(m, ACT_SOFT_BONK, 0);
     }
 
-#ifdef AVOID_UB
+#if QOL_FIX_HIT_WALL_ANIMATION
     return
 #endif
     set_mario_animation(m, MARIO_ANIM_START_WALLKICK);
@@ -1578,7 +1582,11 @@ s32 act_lava_boost(struct MarioState *m) {
 
     switch (perform_air_step(m, 0)) {
         case AIR_STEP_LANDED:
-            if (m->floor->type == SURFACE_BURNING) {
+            if (m->floor->type == SURFACE_BURNING
+#ifdef CHEATS_ACTIONS
+            && (Cheats.EnableCheats && !Cheats.WalkOn.Lava)
+#endif
+            ) {
                 m->actionState = 0;
                 if (!(m->flags & MARIO_METAL_CAP)) {
                     m->hurtCounter += (m->flags & MARIO_CAP_ON_HEAD) ? 12 : 18;
@@ -2162,6 +2170,11 @@ s32 act_special_triple_jump(struct MarioState *m) {
 
     switch (perform_air_step(m, 0)) {
         case AIR_STEP_LANDED:
+            #if QOL_FEATURE_MORE_SPECIAL_TRIPLE_JUMP_ACTIONS
+            if (m->actionState++ != 0) {
+                set_mario_action(m, ACT_FREEFALL_LAND_STOP, 0);
+            }
+            #else
             if (m->actionState++ == 0) {
                 m->vel[1] = 42.0f;
             } else {
@@ -2170,7 +2183,42 @@ s32 act_special_triple_jump(struct MarioState *m) {
             play_mario_landing_sound(m, SOUND_ACTION_TERRAIN_LANDING);
             break;
         
-        case AIR_STEP_HIT_WALL:                    
+        #if QOL_FEATURE_MORE_SPECIAL_TRIPLE_JUMP_ACTIONS
+        case AIR_STEP_HIT_WALL:
+            if (m->forwardVel > 16.0f) {
+                mario_bonk_reflection(m, FALSE);
+                m->faceAngle[1] += 0x8000;
+
+                if (m->wall != NULL)
+                    set_mario_action(m, ACT_AIR_HIT_WALL, 0);
+                else {
+                    if (m->vel[1] > 0.0f)
+                        m->vel[1] = 0.0f;
+
+                    if (m->forwardVel >= 38.0f) {
+                        m->particleFlags |= PARTICLE_VERTICAL_STAR;
+                        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0);
+                    } else {
+                        if (m->forwardVel > 8.0f)
+                            mario_set_forward_vel(m, -8.0f);
+                        return set_mario_action(m, ACT_SOFT_BONK, 0);
+                    }
+                }
+            } else
+                mario_set_forward_vel(m, 0.0f);
+
+            break;
+
+        case AIR_STEP_GRABBED_LEDGE:
+            set_mario_animation(m, MARIO_ANIM_IDLE_ON_LEDGE);
+            drop_and_set_mario_action(m, ACT_LEDGE_GRAB, 0);
+            break;
+
+        case AIR_STEP_GRABBED_CEILING:
+            set_mario_action(m, ACT_START_HANGING, 0);
+            break;
+        #else
+        case AIR_STEP_HIT_WALL:
             mario_bonk_reflection(m, TRUE);
             break;
     }

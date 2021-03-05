@@ -51,20 +51,6 @@ OUTPUT_ARCH (mips)
    } \
    END_SEG(name)
 
-#define CUSTOM_LEVEL(name) \
-   BEGIN_SEG(name##_segment_E, 0x0E000000) \
-   { \
-      BUILD_DIR/levels/name/custom.leveldata.o(.data); \
-   } \
-   END_SEG(name##_segment_E) \
-   BEGIN_SEG(name##_segment_19, 0x19000000) \
-   { \
-	  BUILD_DIR/levels/name/custom.geo.o(.data); \
-	  BUILD_DIR/levels/name/custom.script.o(.data); \
-      . = ALIGN(0x10); \
-   } \
-   END_SEG(name##_segment_19)
-
 #define STANDARD_OBJECTS(name, segAddr, geoAddr) \
    BEGIN_SEG(name##_mio0, segAddr) \
    { \
@@ -128,8 +114,7 @@ SECTIONS
     * just an optimization. */
    BEGIN_SEG(main, .) SUBALIGN(16)
    {
-      
-	  BUILD_DIR/asm/entry.o(.text);
+      BUILD_DIR/asm/entry.o(.text);
       BUILD_DIR/src/game/crash_screen.o(.text);
       BUILD_DIR/src/game/main.o(.text);
       BUILD_DIR/src/game/game_init.o(.text);
@@ -137,12 +122,7 @@ SECTIONS
 #ifdef VERSION_SH
       BUILD_DIR/src/game/rumble_init.o(.text);
 #endif
-      BUILD_DIR/src/menu/star_select.o(.text);
-      BUILD_DIR/src/menu/level_select_menu.o(.text);
-      BUILD_DIR/src/menu/intro_geo.o(.text);
-      BUILD_DIR/src/menu/file_select.o(.text);
-      BUILD_DIR/src/menu*.o(.text);
-	  BUILD_DIR/src/game/level_update.o(.text);
+      BUILD_DIR/src/game/level_update.o(.text);
       BUILD_DIR/src/game/interaction.o(.text);
       BUILD_DIR/src/game/mario.o(.text);
       BUILD_DIR/src/game/mario_step.o(.text);
@@ -354,6 +334,7 @@ SECTIONS
       BUILD_DIR/lib/rsp.o(.text);
 #else
       BUILD_DIR/src/game*.o(.text);
+      BUILD_DIR/src/extras*.o(.text);
       BUILD_DIR/src/audio*.o(.text);
       BUILD_DIR/libultra.a:parameters.o(.text);
       BUILD_DIR/libultra.a:osSetTime.o(.text);
@@ -463,24 +444,14 @@ SECTIONS
 #endif
 
       /* data */
-	  BUILD_DIR/src/game/crash_screen.o(.data*);
+      BUILD_DIR/src/game/crash_screen.o(.data*);
       BUILD_DIR/src/game/main.o(.data*);
       BUILD_DIR/src/game/game_init.o(.data*);
       BUILD_DIR/src/game/sound_init.o(.data*);
 #ifdef VERSION_SH
       BUILD_DIR/src/game/rumble_init.o(.data*);
 #endif
-      /* data, rodata, per file */
-	  BUILD_DIR/src/menu/star_select.o(.data*);
-      BUILD_DIR/src/menu/star_select.o(.rodata*);
-      BUILD_DIR/src/menu/level_select_menu.o(.data*);
-      BUILD_DIR/src/menu/level_select_menu.o(.rodata*);
-      BUILD_DIR/src/menu/intro_geo.o(.data*);
-      BUILD_DIR/src/menu/file_select.o(.data*);
-      BUILD_DIR/src/menu/file_select.o(.rodata*);
-      BUILD_DIR/src/menu*.o(.data*);
-      BUILD_DIR/src/menu*.o(.rodata*);
-	  BUILD_DIR/src/game/level_update.o(.data*);
+      BUILD_DIR/src/game/level_update.o(.data*);
       BUILD_DIR/src/game/interaction.o(.data*);
       BUILD_DIR/src/game/mario.o(.data*);
       BUILD_DIR/src/game/mario_step.o(.data*);
@@ -540,7 +511,9 @@ SECTIONS
       BUILD_DIR/src/audio/port_eu.o(.data*);
       BUILD_DIR/src/audio/data.o(.data*);
 #endif
-
+      
+      BUILD_DIR/src/extras*.o(.data*);
+      
 #if defined(VERSION_EU) || defined(VERSION_SH)
       BUILD_DIR/libultra.a:_Printf.o(.data*);
       BUILD_DIR/libultra.a:osInitialize.o(.data*);
@@ -647,7 +620,9 @@ SECTIONS
       BUILD_DIR/src/audio/external.o(.rodata*);
       BUILD_DIR/src/audio/port_eu.o(.rodata*);
       BUILD_DIR/src/audio*.o(.rodata*);
-
+    
+      BUILD_DIR/src/extras*.o(.rodata*);
+      
 #if defined(VERSION_EU) || defined(VERSION_SH)
       BUILD_DIR/libultra.a:_Printf.o(.rodata*);
 #endif
@@ -690,19 +665,14 @@ SECTIONS
    END_SEG(main)
    BEGIN_NOLOAD(main)
    {
-      
-	  BUILD_DIR/src/game/crash_screen.o(.bss*);
+      BUILD_DIR/src/game/crash_screen.o(.bss*);
       BUILD_DIR/src/game/main.o(.bss*);
       BUILD_DIR/src/game/game_init.o(.bss*);
       BUILD_DIR/src/game/sound_init.o(.bss*);
 #ifdef VERSION_SH
       BUILD_DIR/src/game/rumble_init.o(.bss*);
 #endif
-      BUILD_DIR/src/menu/star_select.o(.bss*);
-      BUILD_DIR/src/menu/intro_geo.o(.bss*);
-      BUILD_DIR/src/menu/file_select.o(.bss*);
-      BUILD_DIR/src/menu*.o(.bss*);
-	  BUILD_DIR/src/game/level_update.o(.bss*);
+      BUILD_DIR/src/game/level_update.o(.bss*);
       BUILD_DIR/src/game/interaction.o(.bss*);
       BUILD_DIR/src/game/mario.o(.bss*);
       BUILD_DIR/src/game/mario_actions_cutscene.o(.bss*);
@@ -750,7 +720,9 @@ SECTIONS
       BUILD_DIR/src/audio/load.o(.bss*);
       BUILD_DIR/src/audio/data.o(.bss*);
 #endif
-
+      
+      BUILD_DIR/src/extras*.o(.bss*);
+      
 #if defined(VERSION_EU) || defined(VERSION_SH)
       BUILD_DIR/libultra.a:osInitialize.o(.bss*);
       BUILD_DIR/libultra.a:osSetEventMesg.o(.bss*);
@@ -944,6 +916,12 @@ SECTIONS
    /* 0x8016F000 21D7D0-255EC0 [386F0] */
    BEGIN_SEG(goddard, SEG_GODDARD)
    {
+      BUILD_DIR/src/menu/level_select_menu.o(.text);
+      BUILD_DIR/src/menu/intro_geo.o(.text);
+      BUILD_DIR/src/menu/file_select.o(.text);
+      BUILD_DIR/src/menu/star_select.o(.text);
+      BUILD_DIR/src/menu*.o(.text);
+#ifdef GODDARD_MFACE
       BUILD_DIR/libgoddard.a:gd_main.o(.text);
       BUILD_DIR/libgoddard.a:gd_memory.o(.text);
       BUILD_DIR/libgoddard.a:sfx.o(.text);
@@ -960,6 +938,18 @@ SECTIONS
       BUILD_DIR/libgoddard.a:shape_helper.o(.text);
       BUILD_DIR/libgoddard.a:renderer.o(.text);
       BUILD_DIR/libgoddard.a:*.o(.text);
+#endif
+      /* data, rodata, per file */
+      BUILD_DIR/src/menu/level_select_menu.o(.data*);
+      BUILD_DIR/src/menu/level_select_menu.o(.rodata*);
+      BUILD_DIR/src/menu/intro_geo.o(.data*);
+      BUILD_DIR/src/menu/file_select.o(.data*);
+      BUILD_DIR/src/menu/file_select.o(.rodata*);
+      BUILD_DIR/src/menu/star_select.o(.data*);
+      BUILD_DIR/src/menu/star_select.o(.rodata*);
+      BUILD_DIR/src/menu*.o(.data*);
+      BUILD_DIR/src/menu*.o(.rodata*);
+#ifdef GODDARD_MFACE
       /* goddard subsystem data */
       BUILD_DIR/libgoddard.a:gd_main.o(.data*);
       BUILD_DIR/libgoddard.a:draw_objects.o(.data*);
@@ -985,10 +975,16 @@ SECTIONS
       BUILD_DIR/libgoddard.a:gd_math.o(.rodata*);
       BUILD_DIR/libgoddard.a:shape_helper.o(.rodata*);
       BUILD_DIR/libgoddard.a:renderer.o(.rodata*);
+#endif
    }
    END_SEG(goddard)
    BEGIN_NOLOAD(goddard)
    {
+      BUILD_DIR/src/menu/intro_geo.o(.bss*);
+      BUILD_DIR/src/menu/file_select.o(.bss*);
+      BUILD_DIR/src/menu/star_select.o(.bss*);
+      BUILD_DIR/src/menu*.o(.bss*);
+#ifdef GODDARD_MFACE
       BUILD_DIR/libgoddard.a:gd_main.o(.bss*);
       BUILD_DIR/libgoddard.a:gd_memory.o(.bss*);
       BUILD_DIR/libgoddard.a:sfx.o(.bss*);
@@ -1004,6 +1000,7 @@ SECTIONS
       BUILD_DIR/libgoddard.a:shape_helper.o(.bss*);
       BUILD_DIR/libgoddard.a:renderer.o(.bss*);
       BUILD_DIR/libgoddard.a:*.o(.bss*);
+#endif
    }
    END_NOLOAD(goddard)
 
@@ -1029,6 +1026,7 @@ SECTIONS
    MIO0_SEG(debug_level_select, 0x07000000)
    MIO0_SEG(title_screen_bg, 0x0A000000)
 
+#ifdef GODDARD_MFACE
    /* 271B20-2A42A0 [32780] */
    BEGIN_SEG(gd_dynlists, 0x04000000)
    {
@@ -1051,6 +1049,7 @@ SECTIONS
       BUILD_DIR/libgoddard.a:*.o(.rodata);
    }
    END_SEG(gd_dynlists)
+#endif
 
    gMainLevels = __romPos;
 
@@ -1084,9 +1083,6 @@ SECTIONS
    MIO0_SEG(bidw_skybox, 0x0A000000)
    MIO0_SEG(bits_skybox, 0x0A000000)
 
-   // Custom Skyboxes from RM2C. In base repo dummy file exists
-   #include "textures/skyboxes/Skybox_Rules.ld"
-
    // Texture bins
    MIO0_SEG(fire, 0x09000000)
    MIO0_SEG(spooky, 0x09000000)
@@ -1109,13 +1105,6 @@ SECTIONS
 
 #undef STUB_LEVEL
 #undef DEFINE_LEVEL
-
-//So RM2C can partially output custom levels instead of forcing all levels to have custom content
-#define DEFINE_LEVEL(folder,_0) CUSTOM_LEVEL(folder)
-   #include "levels/custom_level_defines.h"
-#undef DEFINE_LEVEL
-
-
 
    /* 4E9FA0-? [?] */
    BEGIN_SEG(assets, __romPos)
