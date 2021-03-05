@@ -129,7 +129,7 @@ s32 osEepromLongRead(UNUSED OSMesgQueue *mq, u8 address, u8 *buffer, int nbytes)
 
 #ifdef TARGET_WEB
     if (EM_ASM_INT({
-        var s = localStorage.sm64_save_file;
+        var s = localStorage.star_road_save_file;
         if (s && s.length === 684) {
             try {
                 var binary = atob(s);
@@ -174,7 +174,7 @@ s32 osEepromLongWrite(UNUSED OSMesgQueue *mq, u8 address, u8 *buffer, int nbytes
         for (var i = 0; i < 512; i++) {
             str += String.fromCharCode(HEAPU8[$0 + i]);
         }
-        localStorage.sm64_save_file = btoa(str);
+        localStorage.star_road_save_file = btoa(str);
     }, content);
     s32 ret = 0;
 #else

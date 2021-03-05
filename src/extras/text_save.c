@@ -14,7 +14,7 @@
 
 #include "course_table.h"
 
-#define FILENAME_FORMAT "%s/sm64_save_file_%d.sav"
+#define FILENAME_FORMAT "%s/star_road_save_file_%d.sav"
 #define NUM_COURSES 15
 #define NUM_BONUS_COURSES 10
 #define NUM_FLAGS 21
