@@ -1,0 +1,10 @@
+extern const GeoLayout bob_platform_geo[];
+extern Lights1 bob_platform_f3d_material_layer1_lights;
+extern u8 bob_platform_bob_1_0xe003010_custom_rgba16_rgba16[];
+extern Vtx bob_platform_bob_platform_mesh_layer_1_vtx_cull[8];
+extern Vtx bob_platform_bob_platform_mesh_layer_1_vtx_0[36];
+extern Gfx bob_platform_bob_platform_mesh_layer_1_tri_0[];
+extern Gfx mat_bob_platform_f3d_material_layer1[];
+extern Gfx mat_revert_bob_platform_f3d_material_layer1[];
+extern Gfx bob_platform_bob_platform_mesh_layer_1[];
+extern Gfx bob_platform_material_revert_render_settings[];

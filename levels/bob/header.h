@@ -34,4 +34,6 @@ extern const Trajectory bob_seg7_metal_ball_path0[];
 extern const Trajectory bob_seg7_metal_ball_path1[];
 extern const Trajectory bob_seg7_trajectory_koopa[];
 extern const LevelScript level_bob_entry[];
+#include "levels/bob/bob_platform/geo_header.h"
+
 #endif
